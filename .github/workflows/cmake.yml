@@ -58,13 +58,13 @@ jobs:
     - name: Build VDSProject_test
       working-directory: ${{runner.workspace}}/build
       shell: bash
-      run: cmake --build . --config $BUILD_TYPE --target VDSProject_test
+      run: cmake --build . --config $BUILD_TYPE --target (VDSProject_test main_test.cpp)
       
       
     - name: Run VDSProject_test
       working-directory: ${{runner.workspace}}/build
       shell: bash
-      run: ${{runner.workspace}}/build/src/test/VDSProject_test
+      run: ${{runner.workspace}}/build/src/test/(VDSProject_test main_test.cpp)
     
     - name: Build  main_test.cpp
       working-directory: ${{runner.workspace}}/build

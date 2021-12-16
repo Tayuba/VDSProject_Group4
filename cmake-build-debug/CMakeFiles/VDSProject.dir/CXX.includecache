@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/Manager.cpp
-Manager.h
-/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/Manager.h
-
 /Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/Manager.h
 ManagerInterface.h
 /Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/ManagerInterface.h
@@ -21,4 +17,12 @@ string
 -
 set
 -
+
+/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/main.cpp
+iostream
+-
+string
+-
+Manager.h
+/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/Manager.h
 

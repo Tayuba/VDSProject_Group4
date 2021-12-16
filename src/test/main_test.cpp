@@ -5,8 +5,13 @@
 
 #include "Tests.h"
 
-int main(int argc, char* argv[])
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+namespace ClassProject{
+    TEST(uniqueTableSizeTest, ChecksSizeOfTable) {
+        Manager  m = new Manager();
+        EXPECT_EQ(m.uniqueTableSize(), 1);
+    }
+    int main(int argc, char *argv[]) {
+        ::testing::InitGoogleTest(&argc, argv);
+        return RUN_ALL_TESTS();
+    }
 }

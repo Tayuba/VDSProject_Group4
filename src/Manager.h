@@ -21,11 +21,9 @@ namespace ClassProject {
             BDD_ID top;
         };
 
-        static std::vector<BDDnode> unique_table;
+        std::vector<BDDnode> unique_table;
 
-        virtual size_t uniqueTableSize()=0;
-
-
+        size_t uniqueTableSize();
 
     public:  Manager(){
 
@@ -36,7 +34,6 @@ namespace ClassProject {
             unique_table.push_back(T);
 
         }
-
     };
 }
 #endif

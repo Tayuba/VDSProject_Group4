@@ -10,7 +10,7 @@ set(GTEST_LIB_DIR ${CMAKE_SOURCE_DIR}/lib)
 find_library(GTest GTest ${GTEST_LIB_DIR})
 link_directories(${GTEST_LIB_DIR})
 
-add_executable(VDSProject ${GTEST_LIB_DIR})
+
 add_executable(VDSProject_test ${UNIT_TESTS})
 target_link_libraries(VDSProject_test Manager)
 target_link_libraries(VDSProject_test gtest gtest_main pthread)

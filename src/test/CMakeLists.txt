@@ -5,12 +5,13 @@ include(install_gtest.cmake)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(.)
 
+set(MAIN_FILE main.cpp)
 set(UNIT_TESTS main_test.cpp)
 set(GTEST_LIB_DIR ${CMAKE_SOURCE_DIR}/lib)
 find_library(GTest GTest ${GTEST_LIB_DIR})
 link_directories(${GTEST_LIB_DIR})
 
-
+add_executable(VDSProject_test ${(MAIN_FILE})
 add_executable(VDSProject_test ${UNIT_TESTS})
 target_link_libraries(VDSProject_test Manager)
 target_link_libraries(VDSProject_test gtest gtest_main pthread)

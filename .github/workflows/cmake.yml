@@ -66,6 +66,8 @@ jobs:
       shell: bash
       run: ${{runner.workspace}}/build/src/test/VDSProject_tes
       
+        g++ main.cpp `pkg-config gtest --libs`
+      
      
       
     - name: Build VDSProject_reachability

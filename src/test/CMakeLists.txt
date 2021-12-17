@@ -1,5 +1,5 @@
 project(VDSProject_test CXX C)
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.13)
 
 include(install_gtest.cmake)
 include_directories(${CMAKE_SOURCE_DIR}/include)

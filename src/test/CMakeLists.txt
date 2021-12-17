@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 
 include(install_gtest.cmake)
 include_directories(${CMAKE_SOURCE_DIR}/include)
-
+include_directories(.)
 
 set(UNIT_TESTS main_test.cpp)
 set(GTEST_LIB_DIR ${CMAKE_SOURCE_DIR}/lib)

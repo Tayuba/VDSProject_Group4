@@ -100,5 +100,20 @@ jobs:
         working-directory: ${{runner.workspace}}/build
         shell: bash
         run: ${{runner.workspace}}/build/src/test/VDSProject_test
+
+#          g++ main.cpp `pkg-config gtest --libs`
+
+
+
+#       - name: Build VDSProject_reachability
+#         working-directory: ${{runner.workspace}}/build
+#         shell: bash
+#         run:  cmake --build . --config $BUILD_TYPE --target VDSProject_reachability
+
+
+#       - name: Run VDSProject_reachability
+#         working-directory: ${{runner.workspace}}/build
+#         shell: bash
+#         run: ${{runner.workspace}}/build/src/reachability/VDSProject_reachability
   
       

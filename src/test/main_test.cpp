@@ -1,9 +1,9 @@
 //
 // Created by ludwig on 22.11.16.
+
 #include "Tests.h"
 
 namespace ClassProject{
-
     TEST(uniqueTableSizeTest, ChecksSizeOfTable) {
         Manager *m = new Manager();
         EXPECT_EQ(m->uniqueTableSize(), 2);

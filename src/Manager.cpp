@@ -1,7 +1,5 @@
 #include "Manager.h"
 
-
     size_t ClassProject::Manager::uniqueTableSize() {
-        return 0;
+        return ClassProject::Manager::unique_table.size();
     }
-

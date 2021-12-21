@@ -10,7 +10,7 @@ namespace ClassProject{
     }
     TEST(createVarTest, CheckIDOfVar){
         Manager *m = new Manager();
-        EXPECT_EQ(m->createVar("a"), 3);
+        EXPECT_EQ(m->createVar("a"), 2);
     }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);

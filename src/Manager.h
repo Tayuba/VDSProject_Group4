@@ -24,6 +24,7 @@ namespace ClassProject {
         std::vector<BDDnode> unique_table;
 
         size_t uniqueTableSize();
+        BDD_ID createVar(const std::string &label);
 
     public:  Manager(){
 

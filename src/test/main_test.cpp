@@ -8,6 +8,10 @@ namespace ClassProject{
         Manager *m = new Manager();
         EXPECT_EQ(m->uniqueTableSize(), 2);
     }
+    TEST(createVarTest, CheckIDOfVar){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->createVar("a"), 3);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

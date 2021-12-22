@@ -21,3 +21,12 @@
             return 0;
         }
 }
+    const ClassProject::BDD_ID &ClassProject::Manager::False(){
+        static const BDD_ID FalseID = ClassProject::Manager::unique_table[0].node_id;
+        return FalseID;
+}
+
+const ClassProject::BDD_ID &ClassProject::Manager::True(){
+    static const BDD_ID TrueID = ClassProject::Manager::unique_table[1].node_id;
+    return TrueID;
+}

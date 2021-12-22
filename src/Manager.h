@@ -16,8 +16,8 @@ namespace ClassProject {
         struct BDDnode {
             BDD_ID node_id;
             std::string label;
-            BDD_ID low;
             BDD_ID high;
+            BDD_ID low;
             BDD_ID top;
         };
 

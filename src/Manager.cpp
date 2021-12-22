@@ -26,7 +26,11 @@
         return FalseID;
 }
 
-const ClassProject::BDD_ID &ClassProject::Manager::True(){
-    static const BDD_ID TrueID = ClassProject::Manager::unique_table[1].node_id;
-    return TrueID;
+    const ClassProject::BDD_ID &ClassProject::Manager::True(){
+        static const BDD_ID TrueID = ClassProject::Manager::unique_table[1].node_id;
+        return TrueID;
+}
+
+    ClassProject::BDD_ID ClassProject::Manager::topVar(BDD_ID f) {
+        return ClassProject::Manager::unique_table[f].top;
 }

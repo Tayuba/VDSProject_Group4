@@ -20,6 +20,10 @@ namespace ClassProject{
         Manager *m = new Manager();
         EXPECT_EQ(m->True(), 1);
     }
+    TEST(TopVarTest, ReturnTopVarID){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->topVar(0), 0);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

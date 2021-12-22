@@ -27,6 +27,6 @@
 }
 
 const ClassProject::BDD_ID &ClassProject::Manager::True(){
-    static const BDD_ID TrueID = 0;
+    static const BDD_ID TrueID = ClassProject::Manager::unique_table[1].node_id;
     return TrueID;
 }

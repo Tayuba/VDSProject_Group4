@@ -27,6 +27,7 @@ namespace ClassProject {
         BDD_ID createVar(const std::string &label);
         const BDD_ID &True();
         const BDD_ID &False();
+        BDD_ID topVar(BDD_ID f);
 
     public:  Manager(){
 

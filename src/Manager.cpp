@@ -32,6 +32,5 @@
 }
 
     ClassProject::BDD_ID ClassProject::Manager::topVar(BDD_ID f) {
-
-        return 1;
+        return ClassProject::Manager::unique_table[f].top;
 }

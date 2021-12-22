@@ -21,3 +21,6 @@
             return 0;
         }
 }
+    const ClassProject::BDD_ID &ClassProject::Manager::False(){
+        return 1;
+}

@@ -25,6 +25,8 @@ namespace ClassProject {
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);
+        //const BDD_ID &True();
+        const BDD_ID &False();
 
     public:  Manager(){
 

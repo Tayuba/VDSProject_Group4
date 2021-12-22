@@ -22,5 +22,6 @@
         }
 }
     const ClassProject::BDD_ID &ClassProject::Manager::False(){
-        return 1;
+        static const BDD_ID FalseID = 1;
+        return FalseID;
 }

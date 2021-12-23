@@ -42,7 +42,7 @@
         if(t == True() && e == False()) return i;
 
         BDD_ID topVariable = topVar(i);
-
+        return 10;
 }
 
     bool ClassProject::Manager::isConstant(BDD_ID f){

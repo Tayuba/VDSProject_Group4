@@ -30,6 +30,10 @@ namespace ClassProject{
         BDD_ID id2 = m->createVar("b");
         EXPECT_EQ(m->ite(id1,id2,0), 4);
     }
+    TEST(isConstantTest, isConstantTest){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->isConstant(0), true);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

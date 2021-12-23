@@ -53,5 +53,8 @@
 }
 
     bool ClassProject::Manager::isVariable(BDD_ID x){
-        return false;
+        if(unique_table[x].label !="False" && unique_table[x].label !="True" && !unique_table[x].label.empty())
+            return true;
+        else
+            return false;
 }

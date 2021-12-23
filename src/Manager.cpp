@@ -51,3 +51,7 @@
         else
             return false;
 }
+
+    bool ClassProject::Manager::isVariable(BDD_ID x){
+        return false;
+}

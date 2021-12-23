@@ -34,6 +34,11 @@ namespace ClassProject{
         Manager *m = new Manager();
         EXPECT_EQ(m->isConstant(0), true);
     }
+    TEST(isVariableTest, isVariableTest){
+        Manager *m = new Manager();
+        BDD_ID id1 = m->createVar("a");
+        EXPECT_EQ(m->isVariable(id1), true);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

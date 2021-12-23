@@ -46,5 +46,8 @@
 }
 
     bool ClassProject::Manager::isConstant(BDD_ID f){
-        return false;
+        if(f==0 || f==1)
+            return true;
+        else
+            return false;
 }

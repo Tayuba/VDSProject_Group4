@@ -24,6 +24,12 @@ namespace ClassProject{
         Manager *m = new Manager();
         EXPECT_EQ(m->topVar(0), 0);
     }
+    TEST(ITETest, ITETest){
+        Manager *m = new Manager();
+        BDD_ID id1 = m->createVar("a");
+        BDD_ID id2 = m->createVar("b");
+        EXPECT_EQ(m->ite(id1,id2,0), 4);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

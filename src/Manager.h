@@ -28,6 +28,7 @@ namespace ClassProject {
         const BDD_ID &True();
         const BDD_ID &False();
         BDD_ID topVar(BDD_ID f);
+        BDD_ID ite(BDD_ID i, BDD_ID t, BDD_ID e);
 
     public:  Manager(){
 

@@ -58,3 +58,18 @@
         else
             return false;
 }
+
+    ClassProject::BDD_ID ClassProject::Manager::coFactorTrue(BDD_ID f, BDD_ID x){
+        BDD_ID F, T;
+
+        if (isConstant(f) || ClassProject::Manager::unique_table[f].top > x)
+            return 1;
+        if(topVar(f)==x)
+            return unique_table[f].low;
+        else {
+            F = coFactorTrue(unique_table[f].low, x);
+            T = coFactorTrue(unique_table[f].high, x);
+
+            return ite(topVar(x), T, F);
+        }
+}

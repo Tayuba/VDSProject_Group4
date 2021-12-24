@@ -39,6 +39,14 @@ namespace ClassProject{
         BDD_ID id1 = m->createVar("a");
         EXPECT_EQ(m->isVariable(id1), true);
     }
+    TEST(coFactorTrueTest, coFactorTrueTest){
+        Manager *m = new Manager();
+        BDD_ID f1 = m->createVar("a");
+        BDD_ID x = m->createVar("b");
+        BDD_ID f = m->isConstant(1);
+        EXPECT_EQ(m->coFactorTrue(f1, x), f1);
+        EXPECT_EQ(m->coFactorTrue(f, x), f);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

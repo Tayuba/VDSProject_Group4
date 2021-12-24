@@ -63,13 +63,13 @@
         BDD_ID F, T;
 
         if (isConstant(f) || ClassProject::Manager::unique_table[f].top > x)
-            return 1;
+            return f;
         if(topVar(f)==x)
-            return unique_table[f].low;
+            return unique_table[f].high;
         else {
             F = coFactorTrue(unique_table[f].low, x);
             T = coFactorTrue(unique_table[f].high, x);
 
-            return ite(topVar(x), T, F);
+            return ite(topVar(f), T, F);
         }
 }

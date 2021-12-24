@@ -30,7 +30,7 @@ namespace ClassProject {
 //
         virtual BDD_ID coFactorTrue(BDD_ID f, BDD_ID x) = 0;
 //
-//        virtual BDD_ID coFactorFalse(BDD_ID f, BDD_ID x) = 0;
+        virtual BDD_ID coFactorFalse(BDD_ID f, BDD_ID x) = 0;
 //
 //        virtual BDD_ID coFactorTrue(BDD_ID f) = 0;
 //

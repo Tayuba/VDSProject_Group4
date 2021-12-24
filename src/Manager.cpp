@@ -73,3 +73,19 @@
             return ite(topVar(f), T, F);
         }
 }
+
+ClassProject::BDD_ID ClassProject::Manager::coFactorFalse(BDD_ID f, BDD_ID x){
+    BDD_ID F, T;
+
+    if (isConstant(f) || ClassProject::Manager::unique_table[f].top > x)
+        return x;
+    if(topVar(f)==x)
+        return unique_table[f].high;
+    else {
+        F = coFactorTrue(unique_table[f].low, x);
+        T = coFactorTrue(unique_table[f].high, x);
+
+        return ite(topVar(x), T, F);
+    }
+}
+

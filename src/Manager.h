@@ -32,6 +32,7 @@ namespace ClassProject {
         bool isConstant(BDD_ID f);
         bool isVariable(BDD_ID x);
         BDD_ID coFactorTrue(BDD_ID f, BDD_ID x);
+        BDD_ID coFactorFalse(BDD_ID f, BDD_ID x);
 
     public:  Manager(){
 

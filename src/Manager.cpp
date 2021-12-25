@@ -120,6 +120,7 @@
         return nand;
 }
     ClassProject::BDD_ID ClassProject::Manager::nor2(BDD_ID a, BDD_ID b){
-
-        return 0;
+        BDD_ID Or = or2(a, b);
+        BDD_ID nor = neg(Or);
+        return nor;
 }

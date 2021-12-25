@@ -74,18 +74,27 @@
         }
 }
 
-ClassProject::BDD_ID ClassProject::Manager::coFactorFalse(BDD_ID f, BDD_ID x){
-    BDD_ID F, T;
+    ClassProject::BDD_ID ClassProject::Manager::coFactorFalse(BDD_ID f, BDD_ID x){
+        BDD_ID F, T;
 
-    if (isConstant(f) || ClassProject::Manager::unique_table[f].top > x)
-        return f;
-    if(topVar(f)==x)
-        return unique_table[f].low;
-    else {
-        F = coFactorTrue(unique_table[f].low, x);
-        T = coFactorTrue(unique_table[f].high, x);
+        if (isConstant(f) || ClassProject::Manager::unique_table[f].top > x)
+            return f;
+        if(topVar(f)==x)
+            return unique_table[f].low;
+        else {
+            F = coFactorTrue(unique_table[f].low, x);
+            T = coFactorTrue(unique_table[f].high, x);
 
-        return ite(topVar(f), T, F);
-    }
+            return ite(topVar(f), T, F);
+        }
 }
 
+    ClassProject::BDD_ID ClassProject::Manager:: coFactorTrue(BDD_ID f){
+
+        return ClassProject::Manager::unique_table[f].low;
+
+
+}
+//    ClassProject::BDD_ID ClassProject::Manager::neg(BDD_ID a) {
+//
+//}

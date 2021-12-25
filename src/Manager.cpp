@@ -103,6 +103,6 @@
 }
     ClassProject::BDD_ID ClassProject::Manager::neg(BDD_ID a) {
 
-        return ite(a, 1, 0);
+        return ite(a, 0, 1);
 
 }

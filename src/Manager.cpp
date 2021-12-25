@@ -95,6 +95,12 @@
 
 
 }
+    ClassProject::BDD_ID ClassProject::Manager:: coFactorFalse(BDD_ID f){
+
+    return ClassProject::Manager::unique_table[f].high;
+
+
+}
 //    ClassProject::BDD_ID ClassProject::Manager::neg(BDD_ID a) {
 //
 //}

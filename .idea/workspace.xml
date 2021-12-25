@@ -20,8 +20,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="Create a test for coFactorTrue">
+    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManagerInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerInterface.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,7 @@
       <workItem from="1639683021536" duration="8617000" />
       <workItem from="1640121708102" duration="1230000" />
       <workItem from="1640369982984" duration="14471000" />
-      <workItem from="1640423364145" duration="3734000" />
+      <workItem from="1640423364145" duration="5239000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>
@@ -172,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640429013726</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implement coFactorTrue function">
+      <created>1640429555214</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640429555214</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,10 +190,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create a test for coFactorTrue function" />
-    <MESSAGE value="Implement coFactorTrue function" />
     <MESSAGE value="Create a test for coFactorFalse function" />
     <MESSAGE value="Implement coFactorFalse function" />
     <MESSAGE value="Create a test for coFactorTrue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create a test for coFactorTrue" />
+    <MESSAGE value="Implement coFactorTrue function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement coFactorTrue function" />
   </component>
 </project>

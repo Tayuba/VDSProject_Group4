@@ -106,3 +106,8 @@
 
         return ite(a, b, 0);
 }
+    ClassProject::BDD_ID ClassProject::Manager::or2(BDD_ID a, BDD_ID b){
+
+        return 0;
+
+}

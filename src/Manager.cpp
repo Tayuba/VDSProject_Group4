@@ -115,6 +115,7 @@
         return ite(a, negB, b);
 }
     ClassProject::BDD_ID ClassProject::Manager::nand2(BDD_ID a, BDD_ID b){
-
-        return 0;
+        BDD_ID And = and2(a, b);
+        BDD_ID nand = neg(And);
+        return nand;
 }

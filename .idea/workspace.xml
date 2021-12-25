@@ -21,6 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ManagerInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerInterface.h" afterDir="false" />
@@ -138,7 +139,7 @@
       <workItem from="1639683021536" duration="8617000" />
       <workItem from="1640121708102" duration="1230000" />
       <workItem from="1640369982984" duration="14471000" />
-      <workItem from="1640423364145" duration="16097000" />
+      <workItem from="1640423364145" duration="17308000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>
@@ -238,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640453513627</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Create a test for xor2 function">
+      <created>1640454044759</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1640454044759</updated>
+    </task>
+    <task id="LOCAL-00016" summary="implement the xor2 function">
+      <created>1640454403180</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1640454403180</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +272,8 @@
     <MESSAGE value="implement the and2 function" />
     <MESSAGE value="Create a test for or2 function" />
     <MESSAGE value="implement the or2 function" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement the or2 function" />
+    <MESSAGE value="Create a test for xor2 function" />
+    <MESSAGE value="implement the xor2 function" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement the xor2 function" />
   </component>
 </project>

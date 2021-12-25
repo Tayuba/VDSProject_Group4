@@ -35,7 +35,7 @@ namespace ClassProject {
         BDD_ID coFactorFalse(BDD_ID f, BDD_ID x);
         BDD_ID coFactorTrue(BDD_ID f);
         BDD_ID coFactorFalse(BDD_ID f);
-//        BDD_ID neg(BDD_ID a);
+        BDD_ID neg(BDD_ID a);
 
     public:  Manager(){
 

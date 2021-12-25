@@ -20,7 +20,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="" />
+    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManagerInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/main_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/main_test.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +139,7 @@
       <workItem from="1639683021536" duration="8617000" />
       <workItem from="1640121708102" duration="1230000" />
       <workItem from="1640369982984" duration="14471000" />
-      <workItem from="1640423364145" duration="5549000" />
+      <workItem from="1640423364145" duration="11427000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>
@@ -184,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640439211021</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implement coFactorTrue function">
+      <created>1640439392318</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640439392318</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,8 +208,8 @@
     <MESSAGE value="Create a test for coFactorFalse function" />
     <MESSAGE value="Implement coFactorFalse function" />
     <MESSAGE value="Create a test for coFactorTrue" />
-    <MESSAGE value="Implement coFactorTrue function" />
     <MESSAGE value="Create a test for coFactorFalse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create a test for coFactorFalse" />
+    <MESSAGE value="Implement coFactorTrue function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement coFactorTrue function" />
   </component>
 </project>

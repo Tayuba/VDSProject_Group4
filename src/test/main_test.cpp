@@ -65,6 +65,12 @@ namespace ClassProject{
         BDD_ID f = m->createVar("a");
         EXPECT_EQ(m->coFactorFalse(f), 0);
     }
+    TEST(negTest, negTest){
+        Manager *m = new Manager();
+        BDD_ID a = m->createVar("a");
+        BDD_ID f = m->ite(a, 0, 1);
+        EXPECT_EQ(m->neg(a), f);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

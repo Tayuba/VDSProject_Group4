@@ -14,7 +14,7 @@
             }
         }
         if(varExists==false){
-            ClassProject::Manager::unique_table.push_back(ClassProject::Manager::BDDnode {sizeOfTable,label,1,0,sizeOfTable});
+            ClassProject:Manager::unique_table.push_back(ClassProject::Manager::BDDnode {sizeOfTable,label,1,0,sizeOfTable});
             return ClassProject::Manager::unique_table[sizeOfTable].node_id;
         }
         else {
@@ -101,6 +101,8 @@
 
 
 }
-//    ClassProject::BDD_ID ClassProject::Manager::neg(BDD_ID a) {
-//
-//}
+    ClassProject::BDD_ID ClassProject::Manager::neg(BDD_ID a) {
+
+        return ite(a, 1, 0);
+
+}

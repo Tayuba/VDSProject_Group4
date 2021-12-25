@@ -104,5 +104,5 @@
 }
     ClassProject::BDD_ID ClassProject::Manager::and2(BDD_ID a, BDD_ID b){
 
-        return 0;
+        return ite(a, b, 0);
 }

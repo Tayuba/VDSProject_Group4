@@ -14,7 +14,7 @@
             }
         }
         if(varExists==false){
-            ClassProject:Manager::unique_table.push_back(ClassProject::Manager::BDDnode {sizeOfTable,label,1,0,sizeOfTable});
+            Manager::unique_table.push_back(ClassProject::Manager::BDDnode {sizeOfTable,label,1,0,sizeOfTable});
             return ClassProject::Manager::unique_table[sizeOfTable].node_id;
         }
         else {
@@ -92,17 +92,17 @@
     ClassProject::BDD_ID ClassProject::Manager:: coFactorTrue(BDD_ID f){
 
         return ClassProject::Manager::unique_table[f].high;
-
-
 }
     ClassProject::BDD_ID ClassProject::Manager:: coFactorFalse(BDD_ID f){
 
     return ClassProject::Manager::unique_table[f].low;
 
-
 }
     ClassProject::BDD_ID ClassProject::Manager::neg(BDD_ID a) {
 
         return ite(a, 0, 1);
+}
+    ClassProject::BDD_ID ClassProject::Manager::and2(BDD_ID a, BDD_ID b){
 
+        return 0;
 }

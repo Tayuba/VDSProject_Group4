@@ -71,6 +71,12 @@ namespace ClassProject{
         BDD_ID f = m->ite(a, 0, 1);
         EXPECT_EQ(m->neg(a), f);
     }
+    TEST(and2Test, and2Test){
+        Manager *m = new Manager();
+        BDD_ID a = m->createVar("a");
+        BDD_ID b = m->createVar("b");
+        EXPECT_EQ(m->and2(a, b), m->ite(a, b, 0));
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

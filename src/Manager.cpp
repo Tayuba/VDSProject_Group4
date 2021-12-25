@@ -91,7 +91,7 @@
 
     ClassProject::BDD_ID ClassProject::Manager:: coFactorTrue(BDD_ID f){
 
-        return ClassProject::Manager::unique_table[f].low;
+        return ClassProject::Manager::unique_table[f].high;
 
 
 }

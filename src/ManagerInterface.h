@@ -46,7 +46,7 @@ namespace ClassProject {
 //
         virtual BDD_ID nand2(BDD_ID a, BDD_ID b) = 0;
 //
-//        virtual BDD_ID nor2(BDD_ID a, BDD_ID b) = 0;
+        virtual BDD_ID nor2(BDD_ID a, BDD_ID b) = 0;
 //
 //        virtual BDD_ID xnor2(BDD_ID a, BDD_ID b) = 0;
 //

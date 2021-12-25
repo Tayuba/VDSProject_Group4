@@ -119,3 +119,7 @@
         BDD_ID nand = neg(And);
         return nand;
 }
+    ClassProject::BDD_ID ClassProject::Manager::nor2(BDD_ID a, BDD_ID b){
+
+        return 0;
+}

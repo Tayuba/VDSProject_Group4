@@ -98,6 +98,14 @@ namespace ClassProject{
         BDD_ID nand = m->neg(And);
         EXPECT_EQ(m->nand2(a, b),nand);
     }
+    TEST(nor2Test, nor2Test){
+        Manager *m = new Manager();
+        BDD_ID a = m->createVar("a");
+        BDD_ID b = m->createVar("b");
+        BDD_ID Or = m->and2(a,b);
+        BDD_ID nor = m->neg(Or);
+        EXPECT_EQ(m->nor2(a, b),nor);
+    }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

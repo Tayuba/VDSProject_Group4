@@ -124,3 +124,8 @@
         BDD_ID nor = neg(Or);
         return nor;
 }
+    ClassProject::BDD_ID ClassProject::Manager::xnor2(BDD_ID a, BDD_ID b){
+
+        return 0;
+
+}

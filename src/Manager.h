@@ -41,6 +41,7 @@ namespace ClassProject {
         BDD_ID xor2(BDD_ID a, BDD_ID b);
         BDD_ID nand2(BDD_ID a, BDD_ID b);
         BDD_ID nor2(BDD_ID a, BDD_ID b);
+        BDD_ID xnor2(BDD_ID a, BDD_ID b);
 
     public:  Manager(){
 

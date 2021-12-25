@@ -139,7 +139,7 @@
       <workItem from="1639683021536" duration="8617000" />
       <workItem from="1640121708102" duration="1230000" />
       <workItem from="1640369982984" duration="14471000" />
-      <workItem from="1640423364145" duration="18017000" />
+      <workItem from="1640423364145" duration="19267000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>
@@ -267,7 +267,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640455530835</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Create a test for nor2 function">
+      <created>1640455999991</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1640455999991</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Implement the nor2 function">
+      <created>1640456192815</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1640456192815</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +304,8 @@
     <MESSAGE value="implement the xor2 function" />
     <MESSAGE value="Create a test for nand2 function" />
     <MESSAGE value="implement the nand2 function" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement the nand2 function" />
+    <MESSAGE value="Create a test for nor2 function" />
+    <MESSAGE value="Implement the nor2 function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement the nor2 function" />
   </component>
 </project>

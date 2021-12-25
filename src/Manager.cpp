@@ -111,6 +111,6 @@
         return ite(a, 1, b);
 }
     ClassProject::BDD_ID ClassProject::Manager::xor2(BDD_ID a, BDD_ID b){
-
-        return 1;
+        BDD_ID negB = neg(b);
+        return ite(a, negB, b);
 }

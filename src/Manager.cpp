@@ -109,5 +109,8 @@
     ClassProject::BDD_ID ClassProject::Manager::or2(BDD_ID a, BDD_ID b){
 
         return ite(a, 1, b);
+}
+    ClassProject::BDD_ID ClassProject::Manager::xor2(BDD_ID a, BDD_ID b){
 
+        return 1;
 }

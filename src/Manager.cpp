@@ -125,7 +125,8 @@
         return nor;
 }
     ClassProject::BDD_ID ClassProject::Manager::xnor2(BDD_ID a, BDD_ID b){
-
-        return 0;
+        BDD_ID Xor = xor2(a, b);
+        BDD_ID xnor = neg(Xor);
+        return xnor;
 
 }

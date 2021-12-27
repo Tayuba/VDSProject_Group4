@@ -68,52 +68,43 @@ namespace ClassProject{
     TEST(negTest, negTest){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
-        BDD_ID f = m->ite(a, 0, 1);
-        EXPECT_EQ(m->neg(a), f);
+        EXPECT_EQ(m->neg(a), 3);
     }
     TEST(and2Test, and2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
         BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->and2(a, b), m->ite(a, b, 0));
+        EXPECT_EQ(m->and2(a, b), 4);
     }
     TEST(or2Test, or2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
         BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->or2(a, b), m->ite(a, 1, b));
+        EXPECT_EQ(m->or2(a, b), 4);
     }
     TEST(xor2Test, xor2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
         BDD_ID b = m->createVar("b");
-        BDD_ID negB = m->neg(b);
-        EXPECT_EQ(m->xor2(a, b), m->ite(a, negB, b));
+        EXPECT_EQ(m->xor2(a, b), 5);
     }
     TEST(nand2Test, nand2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
         BDD_ID b = m->createVar("b");
-        BDD_ID And = m->and2(a,b);
-        BDD_ID nand = m->neg(And);
-        EXPECT_EQ(m->nand2(a, b),nand);
+        EXPECT_EQ(m->nand2(a, b),5);
     }
     TEST(nor2Test, nor2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
         BDD_ID b = m->createVar("b");
-        BDD_ID Or = m->and2(a,b);
-        BDD_ID nor = m->neg(Or);
-        EXPECT_EQ(m->nor2(a, b),nor);
+        EXPECT_EQ(m->nor2(a, b),5);
     }
     TEST(xnor2Test, xnor2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
         BDD_ID b = m->createVar("b");
-        BDD_ID negB = m->neg(b);
-        BDD_ID ite = m->ite(a, negB, b);
-        BDD_ID xnor = m->neg(ite);
-        EXPECT_EQ(m->xnor2(a, b),xnor);
+        EXPECT_EQ(m->xnor2(a, b),6);
     }
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);

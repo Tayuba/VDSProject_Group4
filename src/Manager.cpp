@@ -7,18 +7,19 @@
 }
 
     ClassProject::BDD_ID ClassProject::Manager::createVar(const std::string &label) {
-        bool varExists=false;
+        bool varExists = false;
         size_t sizeOfTable = uniqueTableSize();
-        for(int i=0; i< ClassProject::Manager::unique_table.size(); i++) {
+        for (int i = 0; i < ClassProject::Manager::unique_table.size(); i++) {
             if (ClassProject::Manager::unique_table[i].label == label) {
                 varExists = true;
                 return ClassProject::Manager::unique_table[i].node_id;
             }
         }
-        if(varExists==false){
-            Manager::unique_table.push_back(ClassProject::Manager::BDDnode {sizeOfTable,label,1,0,sizeOfTable});
+        if (varExists == false) {
+            Manager::unique_table.push_back(ClassProject::Manager::BDDnode{sizeOfTable, label, 1, 0, sizeOfTable});
             return ClassProject::Manager::unique_table[sizeOfTable].node_id;
         }
+
         else {
             return 0;
         }
@@ -65,11 +66,6 @@
             topVariables.erase(0);
             topVariables.erase(1);
             topVariable = *(--topVariables.rend());
-//            for (int count=0;count<3;count++){
-//                topVariable=topVariables[0];
-//                if(topVariables[count]<topVariable)
-//                    topVariable=topVariables[count];
-//            }
 
             highSuccessor=ite(coFactorTrue(i,topVariable), coFactorTrue(t,topVariable), coFactorTrue(e,topVariable));
             lowSuccessor=ite(coFactorFalse(i,topVariable), coFactorFalse(t,topVariable), coFactorFalse(e,topVariable));

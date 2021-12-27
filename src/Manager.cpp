@@ -48,13 +48,28 @@
         bool nodeExists = false;
 
         //terminal cases
-        if (i == True()) return t;
-        else if (i == False()) return e;
-        else if(t == e) return t;
-        else if(t == True() && e == False()) return i;
+        if (i == True()) {
+            return t;
+        }
+        else if (i == False()) {
+                return e;
+        }
+        else if(t == e) {
+            return t;
+        }
+        else if(t == True() && e == False()) {
+            return i;
+        }
         else{
             topVariables={topVar(i), topVar(t), topVar(e)};
+            topVariables.erase(0);
+            topVariables.erase(1);
             topVariable = *(--topVariables.rend());
+//            for (int count=0;count<3;count++){
+//                topVariable=topVariables[0];
+//                if(topVariables[count]<topVariable)
+//                    topVariable=topVariables[count];
+//            }
 
             highSuccessor=ite(coFactorTrue(i,topVariable), coFactorTrue(t,topVariable), coFactorTrue(e,topVariable));
             lowSuccessor=ite(coFactorFalse(i,topVariable), coFactorFalse(t,topVariable), coFactorFalse(e,topVariable));

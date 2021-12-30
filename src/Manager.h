@@ -42,6 +42,7 @@ namespace ClassProject {
         BDD_ID nand2(BDD_ID a, BDD_ID b);
         BDD_ID nor2(BDD_ID a, BDD_ID b);
         BDD_ID xnor2(BDD_ID a, BDD_ID b);
+        std::string getTopVarName(const BDD_ID &root);
 
     public:  Manager(){
 

@@ -21,7 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/main_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/main_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

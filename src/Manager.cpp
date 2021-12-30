@@ -173,5 +173,5 @@
 }
 
     std::string ClassProject::Manager::getTopVarName(const BDD_ID &root) {
-    return "";
+    return ClassProject::Manager::unique_table[root].label;
 }

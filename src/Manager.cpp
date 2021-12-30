@@ -185,18 +185,36 @@
         bool terminalLow = false;
 
         while(!terminalHigh){
-            nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].high);
-            currentNode = ClassProject::Manager::unique_table[currentNode].high;
-            if (currentNode == 1)
+            if(currentNode > 1) {
+                nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].high);
+                currentNode = ClassProject::Manager::unique_table[currentNode].high;
+            }
+            else
                 terminalHigh = true;
         }
 
         currentNode = root;
 
         while(!terminalLow){
-            nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].low);
-            currentNode = ClassProject::Manager::unique_table[currentNode].low;
-            if (currentNode == 0)
+            if(currentNode > 1) {
+                nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].low);
+                currentNode = ClassProject::Manager::unique_table[currentNode].low;
+            }
+            else
                 terminalLow = true;
         }
+}
+
+    void ClassProject::Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root){
+        std::set<BDD_ID> nodes_of_root;
+        findNodes(root, nodes_of_root);
+
+        std::set<BDD_ID>::iterator setItr = nodes_of_root.begin();
+
+        for (int i = 0; i<nodes_of_root.size();i++){
+            setItr++;
+            BDD_ID topVariable = topVar(*setItr);
+            vars_of_root.insert(topVariable);
+        }
+
 }

@@ -170,5 +170,8 @@
         BDD_ID Xor = xor2(a, b);
         BDD_ID xnor = neg(Xor);
         return xnor;
+}
 
+    std::string ClassProject::Manager::getTopVarName(const BDD_ID &root) {
+    return ClassProject::Manager::unique_table[root].label;
 }

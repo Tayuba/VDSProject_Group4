@@ -106,6 +106,14 @@ namespace ClassProject{
         BDD_ID b = m->createVar("b");
         EXPECT_EQ(m->xnor2(a, b),6);
     }
+
+    TEST(getTopVarNameTest, ReturnLabel){
+        Manager *m = new Manager();
+        BDD_ID a = m->createVar("a");
+        EXPECT_EQ(m->getTopVarName(2),"a");
+    }
+
+
     int main(int argc, char *argv[]) {
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();

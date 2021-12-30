@@ -21,7 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManagerInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +68,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="CMake Application.gtest_main">
+  <component name="RunManager" selected="CMake Application.Manager">
     <configuration name="uniqueTableSize.uniqueTableSize" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_test" TEST_CLASS="uniqueTableSize" TEST_METHOD="uniqueTableSize" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -77,11 +81,6 @@
       </method>
     </configuration>
     <configuration name="VDSProject" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>

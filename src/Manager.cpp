@@ -173,5 +173,30 @@
 }
 
     std::string ClassProject::Manager::getTopVarName(const BDD_ID &root) {
-    return ClassProject::Manager::unique_table[root].label;
+        return ClassProject::Manager::unique_table[root].label;
+}
+
+    void ClassProject::Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){
+
+        nodes_of_root.insert(root);
+
+        BDD_ID currentNode = root;
+        bool terminalHigh = false;
+        bool terminalLow = false;
+
+        while(!terminalHigh){
+            nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].high);
+            currentNode = ClassProject::Manager::unique_table[currentNode].high;
+            if (currentNode == 1)
+                terminalHigh = true;
+        }
+
+        currentNode = root;
+
+        while(!terminalLow){
+            nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].low);
+            currentNode = ClassProject::Manager::unique_table[currentNode].low;
+            if (currentNode == 0)
+                terminalLow = true;
+        }
 }

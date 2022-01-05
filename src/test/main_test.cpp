@@ -65,11 +65,17 @@ namespace ClassProject{
         BDD_ID f = m->createVar("a");
         EXPECT_EQ(m->coFactorFalse(f), 0);
     }
-    TEST(negTest, negTest){
+    TEST(negTestTrue, negTestTrue){
         Manager *m = new Manager();
-        BDD_ID a = m->createVar("a");
-        EXPECT_EQ(m->neg(a), 3);
+        EXPECT_EQ(m->neg(0), 1);
     }
+
+    TEST(negTestFalse, negTestFalse){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->neg(1), 0);
+    }
+
+
     TEST(and2Test, and2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");
@@ -88,18 +94,26 @@ namespace ClassProject{
         BDD_ID b = m->createVar("b");
         EXPECT_EQ(m->xor2(a, b), 5);
     }
-    TEST(nand2Test, nand2Test){
+
+    TEST(nand2TestTrue, nand2TestTrue){
         Manager *m = new Manager();
-        BDD_ID a = m->createVar("a");
-        BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->nand2(a, b),5);
+        EXPECT_EQ(m->nand2(0, 0),1);
     }
-    TEST(nor2Test, nor2Test){
+    TEST(nand2TestFalse, nand2TestFalse){
         Manager *m = new Manager();
-        BDD_ID a = m->createVar("a");
-        BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->nor2(a, b),5);
+        EXPECT_EQ(m->nand2(1, 1),0);
     }
+
+    TEST(nor2TestTrue, nor2TestTrue){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->nor2(0, 0),1);
+    }
+    TEST(nor2TestFalse, nor2TestFalse){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->nor2(1, 1),0);
+    }
+
+
     TEST(xnor2Test, xnor2Test){
         Manager *m = new Manager();
         BDD_ID a = m->createVar("a");

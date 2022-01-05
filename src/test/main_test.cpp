@@ -75,24 +75,34 @@ namespace ClassProject{
         EXPECT_EQ(m->neg(1), 0);
     }
 
+    TEST(and2TestFalse, and2TestFalse){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->and2(1, 0), 0);
+    }
 
-    TEST(and2Test, and2Test){
+    TEST(and2TestTrue, and2TestTrue){
         Manager *m = new Manager();
-        BDD_ID a = m->createVar("a");
-        BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->and2(a, b), 4);
+        EXPECT_EQ(m->and2(1, 1), 1);
     }
-    TEST(or2Test, or2Test){
+
+    TEST(or2TestFalse, or2TestFalse){
         Manager *m = new Manager();
-        BDD_ID a = m->createVar("a");
-        BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->or2(a, b), 4);
+        EXPECT_EQ(m->or2(0, 0), 0);
     }
-    TEST(xor2Test, xor2Test){
+
+    TEST(or2TestTrue, or2TestTrue){
         Manager *m = new Manager();
-        BDD_ID a = m->createVar("a");
-        BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->xor2(a, b), 5);
+        EXPECT_EQ(m->or2(1, 0), 1);
+    }
+
+    TEST(xor2TestFalse, xor2TestFalse){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->xor2(1, 1), 0);
+    }
+
+    TEST(xor2TestTrue, xor2TestTrue){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->xor2(1, 0), 1);
     }
 
     TEST(nand2TestTrue, nand2TestTrue){
@@ -113,12 +123,14 @@ namespace ClassProject{
         EXPECT_EQ(m->nor2(1, 1),0);
     }
 
-
-    TEST(xnor2Test, xnor2Test){
+    TEST(xnor2TestFalse, xnor2TestFalse){
         Manager *m = new Manager();
-        BDD_ID a = m->createVar("a");
-        BDD_ID b = m->createVar("b");
-        EXPECT_EQ(m->xnor2(a, b),6);
+        EXPECT_EQ(m->xnor2(1, 0),0);
+    }
+
+    TEST(xnor2TestTrue, xnor2TestTrue){
+        Manager *m = new Manager();
+        EXPECT_EQ(m->xnor2(1, 1),1);
     }
 
     TEST(getTopVarNameTest, ReturnLabel){

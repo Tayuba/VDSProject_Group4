@@ -44,7 +44,7 @@
         BDD_ID highSuccessor;
         BDD_ID lowSuccessor;
         BDDnode newNode;
-        size_t tableSize = uniqueTableSize();
+        size_t tableSize ;
         BDDnode existingNode;
         bool nodeExists = false;
 
@@ -73,17 +73,21 @@
             if(highSuccessor==lowSuccessor)
                 return highSuccessor;
 
+            tableSize = uniqueTableSize();
             newNode = {tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
-            for(int j=0; j<tableSize; j++){
+            for(int j=2; j<tableSize; j++){
                 existingNode = ClassProject::Manager::unique_table[j];
-                if(existingNode.high==newNode.high && existingNode.low==newNode.low && existingNode.top==newNode.top)
+                if(existingNode.high==newNode.high && existingNode.low==newNode.low && existingNode.top==newNode.top) {
                     nodeExists = true;
+                    return existingNode.node_id;
+                }
             }
-            if(!nodeExists)
+            if(!nodeExists) {
                 ClassProject::Manager::unique_table.push_back(newNode);
+                return newNode.node_id;
+            }
 
-            return newNode.node_id;
         }
 }
 
@@ -124,8 +128,8 @@
         if(topVar(f)==x)
             return unique_table[f].low;
         else {
-            F = coFactorTrue(unique_table[f].low, x);
-            T = coFactorTrue(unique_table[f].high, x);
+            F = coFactorFalse(unique_table[f].low, x);
+            T = coFactorFalse(unique_table[f].high, x);
 
             return ite(topVar(f), T, F);
         }

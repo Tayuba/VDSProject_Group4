@@ -177,7 +177,8 @@
 }
 
     std::string ClassProject::Manager::getTopVarName(const BDD_ID &root) {
-        return ClassProject::Manager::unique_table[root].label;
+        BDD_ID topVariable = topVar(root);
+        return ClassProject::Manager::unique_table[topVariable].label;
 }
 
     void ClassProject::Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){

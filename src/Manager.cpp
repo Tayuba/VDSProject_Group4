@@ -189,7 +189,9 @@
         bool terminalHigh = false;
         bool terminalLow = false;
 
+        //loop on the right side of the tree
         while(!terminalHigh){
+            //to exclude the 0 and 1 constants
             if(currentNode > 1) {
                 nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].high);
                 currentNode = ClassProject::Manager::unique_table[currentNode].high;
@@ -198,9 +200,12 @@
                 terminalHigh = true;
         }
 
+        //restore the current  node back to the given one to keep searching in the second half of the tree
         currentNode = root;
 
+        //loop on the left side of the tree
         while(!terminalLow){
+            //to exclude the 0 and 1 constants
             if(currentNode > 1) {
                 nodes_of_root.insert(ClassProject::Manager::unique_table[currentNode].low);
                 currentNode = ClassProject::Manager::unique_table[currentNode].low;
@@ -217,9 +222,9 @@
         std::set<BDD_ID>::iterator setItr = nodes_of_root.begin();
 
         for (int i = 0; i<nodes_of_root.size();i++){
-            setItr++;
             BDD_ID topVariable = topVar(*setItr);
             vars_of_root.insert(topVariable);
+            setItr++;
         }
 
 }

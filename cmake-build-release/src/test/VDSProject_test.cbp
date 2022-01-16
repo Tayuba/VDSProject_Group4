@@ -26,6 +26,8 @@
 				<Compiler>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/test"/>
+					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/bench"/>
+					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/verify"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/include"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
@@ -51,6 +53,8 @@
 				<Compiler>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/test"/>
+					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/bench"/>
+					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/verify"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/include"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>

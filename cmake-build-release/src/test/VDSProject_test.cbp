@@ -5,7 +5,7 @@
 		<Option title="VDSProject_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-release\;CMake Files\cmake-build-release\_deps\;CMake Files\cmake-build-release\_deps\googletest-src\;CMake Files\cmake-build-release\_deps\googletest-src\googlemock\;CMake Files\cmake-build-release\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-release\_deps\googletest-src\googletest\;CMake Files\cmake-build-release\_deps\googletest-src\googletest\cmake\;CMake Files\src\;CMake Files\src\test\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.78.0\;CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.78.0\;CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.78.0\;CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.78.0\;CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.78.0\;CMake Files\cmake-build-release\;CMake Files\cmake-build-release\_deps\;CMake Files\cmake-build-release\_deps\googletest-src\;CMake Files\cmake-build-release\_deps\googletest-src\googlemock\;CMake Files\cmake-build-release\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-release\_deps\googletest-src\googletest\;CMake Files\cmake-build-release\_deps\googletest-src\googletest\cmake\;CMake Files\src\;CMake Files\src\test\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/src/test"/>
@@ -24,6 +24,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/test"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/bench"/>
@@ -31,7 +32,6 @@
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/include"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -51,6 +51,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/test"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/src/bench"/>
@@ -58,7 +59,6 @@
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/include"/>
 					<Add directory="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -77,6 +77,57 @@
 		</Unit>
 		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/BoostDetectToolset-1.78.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/Boost-1.78.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/Boost-1.78.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_headers-1.78.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_headers-1.78.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_system-1.78.0/boost_system-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_system-1.78.0/boost_system-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_system-1.78.0/libboost_system-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_system-1.78.0/libboost_system-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_filesystem-1.78.0/boost_filesystem-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_filesystem-1.78.0/boost_filesystem-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_filesystem-1.78.0/libboost_filesystem-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_filesystem-1.78.0/libboost_filesystem-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_atomic-1.78.0/boost_atomic-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_atomic-1.78.0/boost_atomic-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_atomic-1.78.0/libboost_atomic-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.78.0\"/>
+		</Unit>
+		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/../../../../../../../../usr/local/lib/cmake/boost_atomic-1.78.0/libboost_atomic-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\usr\local\lib\cmake\boost_atomic-1.78.0\"/>
 		</Unit>
 		<Unit filename="/Users/paula/Desktop/TUK/Semester 1/Verification of Digital Systems/Project/VDSProject_Group4/cmake-build-release/_deps/googletest-src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\"/>

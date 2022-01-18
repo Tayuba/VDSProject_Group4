@@ -6,7 +6,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
-
+#include <memory>
 #include "Manager.h"
 #include "BenchParser.hpp"
 #include "CircuitToBDD.hpp"

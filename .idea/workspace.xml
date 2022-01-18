@@ -24,12 +24,11 @@
     <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="Fixed test for all functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/VDSProject" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/VDSProject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/VDSProject" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/src/libManager.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/src/libManager.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bench/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bench/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/verify/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/verify/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bench/main_bench.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/bench/main_bench.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.make" />
   </component>
   <component name="RunManager" selected="CMake Application.VDSProject">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
@@ -152,7 +151,7 @@
       <workItem from="1640423364145" duration="19267000" />
       <workItem from="1641397301805" duration="145000" />
       <workItem from="1641397470602" duration="7765000" />
-      <workItem from="1641630871715" duration="3306000" />
+      <workItem from="1641630871715" duration="10178000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>

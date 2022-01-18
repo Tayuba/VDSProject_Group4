@@ -12,6 +12,11 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
+set(Boost_INCLUDE_DIR /usr/local/include/)
+set(Boost_LIBRARY_DIR /usr/local/lib/)
+find_package(Boost COMPONENTS system filesystem REQUIRED)
+include_directories(${Boost_INCLUDE_DIR})
+
 include_directories(${CMAKE_SOURCE_DIR}/src)
 link_directories(${CMAKE_SOURCE_DIR}/src)
 
@@ -25,7 +30,8 @@ include_directories(${CMAKE_SOURCE_DIR}/src/verify/)
 link_directories(${CMAKE_SOURCE_DIR}/src/verify/)
 
 add_subdirectory(src)
-add_executable(VDSProject src/main.cpp)
+add_executable(VDSProject src/main.cpp src/bench/main_bench.cpp)
+
 target_link_libraries(VDSProject Manager)
 
 

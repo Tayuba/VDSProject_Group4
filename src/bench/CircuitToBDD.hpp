@@ -26,7 +26,7 @@ class CircuitToBDD {
 
 public:
 
-    explicit CircuitToBDD(shared_ptr<ClassProject::ManagerInterface> BDD_manager_p);
+    explicit CircuitToBDD(ClassProject::ManagerInterface * BDD_manager_p);
     ~CircuitToBDD();
 
     /**
@@ -52,7 +52,7 @@ private:
     boost::unordered_map<unique_ID_t, ClassProject::BDD_ID> node_to_bdd_id; ///< Mapping from circuit node's unique ID to its BDD ID
     std::unordered_map<label_t, ClassProject::BDD_ID> label_to_bdd_id; ///< Mapping from node's label to its BDD ID
 
-    shared_ptr<ClassProject::ManagerInterface> bdd_manager{};
+    ClassProject::ManagerInterface * bdd_manager;
     std::string result_dir; ///< Directory where the results are stored
 
     std::set<ClassProject::BDD_ID> output_nodes;

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(VDSProject CXX C)
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fPIC -std=c++11 ${LLVM_CXX_FLAGS} ")
+ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fPIC -std=c++11 ${LLVM_CXX_FLAGS} ")
 
 include(FetchContent)
 FetchContent_Declare(

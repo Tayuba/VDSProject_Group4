@@ -8,8 +8,8 @@
 #include <utility>
 
 
-CircuitToBDD::CircuitToBDD(shared_ptr<ClassProject::ManagerInterface> BDD_manager_p) {
-    bdd_manager = std::move(BDD_manager_p);
+CircuitToBDD::CircuitToBDD(ClassProject::ManagerInterface * BDD_manager_p) {
+    bdd_manager = BDD_manager_p;
 }
 
 CircuitToBDD::~CircuitToBDD() = default;

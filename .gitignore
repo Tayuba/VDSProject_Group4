@@ -12,6 +12,8 @@ CTestTestfile.cmake
 _deps
 /cmake-build-debug
 /cmake-build-release
+/cmake-build-release/src
+/cmake-build-release/src/VDSProject.cbp
 /cmake-build-release-wsl
 /build
 .DS_Store

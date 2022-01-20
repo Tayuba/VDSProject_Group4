@@ -12,6 +12,7 @@ CTestTestfile.cmake
 _deps
 /cmake-build-debug
 /cmake-build-release
+/cmake-build-release-wsl
 /build
 .DS_Store
 ### CMake Patch ###

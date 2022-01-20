@@ -1,0 +1,6 @@
+Variable Node: 17 Top Var Id: 2 Top Var Name: 7 Low: 12 High: 7
+Variable Node: 12 Top Var Id: 3 Top Var Name: 6 Low: 10 High: 11
+Variable Node: 10 Top Var Id: 10 Top Var Name: 2 Low: 0 High: 1
+Variable Node: 7 Top Var Id: 3 Top Var Name: 6 Low: 1 High: 6
+Variable Node: 6 Top Var Id: 4 Top Var Name: 3 Low: 1 High: 0
+Terminal Node: 0

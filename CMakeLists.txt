@@ -12,8 +12,8 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-set(Boost_INCLUDE_DIR /usr/local/include/)
-set(Boost_LIBRARY_DIR /usr/local/lib/)
+#set(Boost_INCLUDE_DIR c:/usr/local/include/)
+#set(Boost_LIBRARY_DIR C:/Program Files/Boost/boost_1_55_0/libs)
 find_package(Boost COMPONENTS system filesystem REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 

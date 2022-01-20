@@ -5,21 +5,21 @@
 		<Option title="VDSProject_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\;CMake Files\cmake-build-release\;CMake Files\cmake-build-release\_deps\;CMake Files\cmake-build-release\_deps\googletest-src\;CMake Files\cmake-build-release\_deps\googletest-src\googlemock\;CMake Files\cmake-build-release\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-release\_deps\googletest-src\googletest\;CMake Files\cmake-build-release\_deps\googletest-src\googletest\cmake\;CMake Files\src\;CMake Files\src\test\;CMake Files\src\bench\;CMake Files\src\verify\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\;CMake Files\cmake-build-release-wsl\;CMake Files\cmake-build-release-wsl\_deps\;CMake Files\cmake-build-release-wsl\_deps\googletest-src\;CMake Files\cmake-build-release-wsl\_deps\googletest-src\googlemock\;CMake Files\cmake-build-release-wsl\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-release-wsl\_deps\googletest-src\googletest\;CMake Files\cmake-build-release-wsl\_deps\googletest-src\googletest\cmake\;CMake Files\src\;CMake Files\src\test\;CMake Files\src\bench\;CMake Files\src\verify\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test"/>
+				<Option working_dir="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="VDSProject_test">
-				<Option output="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/VDSProject_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test"/>
+				<Option output="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/VDSProject_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -28,8 +28,8 @@
 					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/src/test"/>
 					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/src/bench"/>
 					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/src/verify"/>
-					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/include"/>
-					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest"/>
+					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest/include"/>
+					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -39,15 +39,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 VDSProject_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 VDSProject_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="VDSProject_test/fast">
-				<Option output="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/VDSProject_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test"/>
+				<Option output="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/VDSProject_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -56,8 +56,8 @@
 					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/src/test"/>
 					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/src/bench"/>
 					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/src/verify"/>
-					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/include"/>
-					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest"/>
+					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest/include"/>
+					<Add directory="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -67,10 +67,10 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 VDSProject_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/src/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 VDSProject_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/Nabih\ Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -119,32 +119,32 @@
 		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/../../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.71.0/libboost_filesystem-variant-static.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googlemock\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googlemock\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googlemock/cmake/gmock.pc.in">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googlemock\cmake\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googlemock\cmake\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googletest\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googletest\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/cmake/Config.cmake.in">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googletest\cmake\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/cmake/gtest.pc.in">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googletest\cmake\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/cmake/gtest_main.pc.in">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googletest\cmake\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release/_deps/googletest-src/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-release\_deps\googletest-src\googletest\cmake\"/>
+		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/_deps/googletest-src/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-release-wsl\_deps\googletest-src\googletest\cmake\"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Nabih Saleh/CLionProjects/VDSProject_Group4/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>

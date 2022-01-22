@@ -31,7 +31,6 @@ link_directories(${CMAKE_SOURCE_DIR}/src/verify/)
 
 add_subdirectory(src)
 add_executable(VDSProject src/main.cpp src/bench/main_bench.cpp)
-
 target_link_libraries(VDSProject Manager)
 
 

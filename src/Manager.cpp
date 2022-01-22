@@ -1,6 +1,7 @@
 #include "Manager.h"
 #include <iterator>
 #include <algorithm>
+#include <unordered_map>
 
     size_t ClassProject::Manager::uniqueTableSize() {
         return ClassProject::Manager::unique_table.size();
@@ -37,60 +38,67 @@
     ClassProject::BDD_ID ClassProject::Manager::topVar(BDD_ID f) {
         return ClassProject::Manager::unique_table[f].top;
 }
-    ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
+
+    ClassProject::BDD_ID find_or_add_unique_table(ClassProject::BDD_ID topVariable, ClassProject::BDD_ID low, ClassProject::BDD_ID high){
+
+
+}
+    ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e) {
 
         std::set<BDD_ID> topVariables;
         BDD_ID topVariable;
         BDD_ID highSuccessor;
         BDD_ID lowSuccessor;
         BDDnode newNode;
-        size_t tableSize ;
+        size_t tableSize;
         BDDnode existingNode;
-        bool nodeExists = false;
+        std::unordered_map<BDD_ID, BDD_ID> computedTable;
+        std::unordered_map<BDD_ID, BDD_ID> inverseTable;
 
         //terminal cases
         if (i == True()) {
             return t;
-        }
-        else if (i == False()) {
-                return e;
-        }
-        else if(t == e) {
+        } else if (i == False()) {
+            return e;
+        } else if (t == e) {
             return t;
-        }
-        else if(t == True() && e == False()) {
+        } else if (t == True() && e == False()) {
             return i;
         }
-        else{
-            topVariables={topVar(i), topVar(t), topVar(e)};
+            //computed table
+
+
+        else {
+            topVariables = {topVar(i), topVar(t), topVar(e)};
             topVariables.erase(0);
             topVariables.erase(1);
             topVariable = *(--topVariables.rend());
 
-            highSuccessor=ite(coFactorTrue(i,topVariable), coFactorTrue(t,topVariable), coFactorTrue(e,topVariable));
-            lowSuccessor=ite(coFactorFalse(i,topVariable), coFactorFalse(t,topVariable), coFactorFalse(e,topVariable));
+            highSuccessor = ite(coFactorTrue(i, topVariable), coFactorTrue(t, topVariable),
+                                coFactorTrue(e, topVariable));
+            lowSuccessor = ite(coFactorFalse(i, topVariable), coFactorFalse(t, topVariable),
+                               coFactorFalse(e, topVariable));
 
-            if(highSuccessor==lowSuccessor)
+            if (highSuccessor == lowSuccessor)
                 return highSuccessor;
 
             tableSize = uniqueTableSize();
-            newNode = {tableSize,"",highSuccessor,lowSuccessor,topVariable};
+            newNode = {tableSize, "", highSuccessor, lowSuccessor, topVariable};
 
-            for(int j=2; j<tableSize; j++){
+            //find or add unique table
+            for (int j = 2; j < tableSize; j++) {
                 existingNode = ClassProject::Manager::unique_table[j];
-                if(existingNode.high==newNode.high && existingNode.low==newNode.low && existingNode.top==newNode.top) {
-                    nodeExists = true;
+                if (existingNode.high == newNode.high && existingNode.low == newNode.low &&
+                    existingNode.top == newNode.top) {
                     return existingNode.node_id;
                 }
             }
-            if(!nodeExists) {
-                ClassProject::Manager::unique_table.push_back(newNode);
-                return newNode.node_id;
-            }
+
+            ClassProject::Manager::unique_table.push_back(newNode);
+            return newNode.node_id;
 
         }
-}
-
+    }
     bool ClassProject::Manager::isConstant(BDD_ID f){
         if(f==0 || f==1)
             return true;

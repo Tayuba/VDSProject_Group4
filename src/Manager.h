@@ -7,6 +7,7 @@
 
 #include "ManagerInterface.h"
 #include <vector>
+#include "unordered_map"
 
 namespace ClassProject {
 
@@ -21,7 +22,18 @@ namespace ClassProject {
             BDD_ID top;
         };
 
-        std::vector<BDDnode> unique_table;
+//        std::vector<BDDnode> unique_table;
+
+        struct LookUp {
+            BDD_ID f;
+            BDD_ID g;
+            BDD_ID h;
+            BDD_ID Node_Id;
+        };
+//        std::vector<LookUp> computedTable;
+
+        std::unordered_map<BDD_ID, LookUp>c_Table;
+        std::unordered_map<BDD_ID, BDDnode>u_Table;
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);
@@ -45,6 +57,8 @@ namespace ClassProject {
         std::string getTopVarName(const BDD_ID &root);
         void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root);
         void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
+        bool getComputedTable(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &Node_Id);
+        BDD_ID find_or_add_unique_table(BDD_ID highSuccessor, BDD_ID lowSuccessor, BDD_ID topVariable);
 
     public:  Manager(){
 
@@ -52,9 +66,10 @@ namespace ClassProject {
             BDDnode T = {1,"True",1,1,1};
 
 
-
-            unique_table.push_back(F);
-            unique_table.push_back(T);
+            u_Table[0] = F;
+            u_Table[1] = T;
+//            unique_table.push_back(F);
+//            unique_table.push_back(T);
 
         }
 

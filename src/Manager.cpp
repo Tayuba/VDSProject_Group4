@@ -51,6 +51,9 @@
         return false;
 }
 
+    void standard_triple(ClassProject::BDD_ID &f, ClassProject::BDD_ID &g, ClassProject::BDD_ID &h){
+
+}
 
     ClassProject::BDD_ID ClassProject:: Manager:: find_or_add_unique_table(ClassProject::BDD_ID highSuccessor, ClassProject:: BDD_ID lowSuccessor, ClassProject:: BDD_ID topVariable){
         BDDnode newNode, existingNode;

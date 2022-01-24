@@ -65,6 +65,7 @@ namespace ClassProject {
         void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
         bool getComputedTable(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &Node_Id);
         BDD_ID find_or_add_unique_table(BDD_ID highSuccessor, BDD_ID lowSuccessor, BDD_ID topVariable);
+        void standard_triple(BDD_ID &f, BDD_ID &g, BDD_ID &h);
 
     public:  Manager(){
 
@@ -86,6 +87,10 @@ namespace ClassProject {
         }
 
 
+
+    public:    ~Manager(){
+            u_Table.erase(u_Table.begin());
+        }
 
     };
 

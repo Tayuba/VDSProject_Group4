@@ -12,6 +12,7 @@
 namespace ClassProject {
 
     class Manager : public ManagerInterface {
+
     public:
 
         struct BDDnode {
@@ -24,16 +25,21 @@ namespace ClassProject {
 
 //        std::vector<BDDnode> unique_table;
 
-        struct LookUp {
+        struct c_read {
             BDD_ID f;
             BDD_ID g;
             BDD_ID h;
             BDD_ID Node_Id;
         };
-//        std::vector<LookUp> computedTable;
-
-        std::unordered_map<BDD_ID, LookUp>c_Table;
-        std::unordered_map<BDD_ID, BDDnode>u_Table;
+        struct LookUp {
+            BDD_ID f;
+            BDD_ID g;
+            BDD_ID h;
+//            BDD_ID Node_Id;
+        };
+        std::unordered_map<BDD_ID , LookUp>c_Table;
+        std::vector<c_read> computedTable;
+        std::unordered_map<BDD_ID , BDDnode>u_Table;
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);
@@ -62,18 +68,27 @@ namespace ClassProject {
 
     public:  Manager(){
 
+
+
+
             BDDnode F = {0,"False",0,0,0};
             BDDnode T = {1,"True",1,1,1};
 
 
-            u_Table[0] = F;
-            u_Table[1] = T;
+            u_Table.insert({0, F});
+            u_Table.insert({1, T});
 //            unique_table.push_back(F);
 //            unique_table.push_back(T);
 
         }
+    virtual    ~Manager(){
+            u_Table.erase(u_Table.begin());
+        }
+
+
 
     };
 
 }
+
 #endif

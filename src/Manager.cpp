@@ -8,17 +8,16 @@
 
     ClassProject::BDD_ID ClassProject::Manager::createVar(const std::string &label) {
         size_t sizeOfTable = uniqueTableSize();
-        for(const auto& i : u_Table){
+        for(const auto& i : u_Table) {
             if (i.second.label == label) {
                 return i.second.node_id;
             }
         }
-
-        u_Table[sizeOfTable] = BDDnode{sizeOfTable, label, 1, 0, sizeOfTable};
+        u_Table.insert({sizeOfTable, BDDnode{sizeOfTable, label, 1, 0, sizeOfTable} });
         return u_Table[sizeOfTable].node_id;
 
+}
 
-    }
     const ClassProject::BDD_ID &ClassProject::Manager::False(){
         static const BDD_ID FalseID = u_Table[0].node_id;
         return FalseID;
@@ -36,17 +35,22 @@
     }
 
     bool ClassProject::Manager::getComputedTable(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &Node_Id){
-        LookUp check = {i, t, e, Node_Id};
+        c_read check = {i, t, e, Node_Id};
 
-        for(auto j : c_Table)
-        {
-//            Node_Id = j.second.Node_Id;
-
-            if(check.f == j.second.f && check.g == j.second.g && check.h == j.second.h ){
-                Node_Id = j.second.Node_Id;
+//        for(auto j : c_Table)
+//        {
+        auto search = c_Table.find(Node_Id);
+        if (search != c_Table.end()){
+            if(check.f && check.g && check.h && check.Node_Id == search->first) {
+                Node_Id = check.Node_Id;
                 return true;
             }
         }
+//        }
+//        if(check.f == c_Table.f && check.g == j.second.g && check.h == j.second.h ){
+//            Node_Id = c_Table.find(Node_Id);
+//            return true;
+//        }
 
         return false;
 }
@@ -66,7 +70,7 @@
             }
         }
 
-        u_Table[tableSize] = newNode;
+        u_Table.insert({tableSize, newNode});
         return newNode.node_id;
 
 }
@@ -109,7 +113,7 @@
                 return highSuccessor;
 
             Node_Id = find_or_add_unique_table(highSuccessor, lowSuccessor, topVariable);
-            c_Table[Node_Id] = {i, t, e, Node_Id};
+            c_Table[{Node_Id}] = {i, t, e};
             return Node_Id;
 
         }

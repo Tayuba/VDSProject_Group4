@@ -24,10 +24,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
+    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="optimized to  less than 10 seconds runtime, VM: 2812 average and RSS 2964 average as well.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/bench/VDSProject_bench" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/src/bench/VDSProject_bench" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/libManager.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/src/libManager.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.h" afterDir="false" />
     </list>
@@ -187,7 +185,7 @@
       <workItem from="1641630871715" duration="10178000" />
       <workItem from="1642677089585" duration="437000" />
       <workItem from="1642691384962" duration="2121000" />
-      <workItem from="1642904093012" duration="51678000" />
+      <workItem from="1642904093012" duration="53513000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>
@@ -350,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642957842355</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="optimized to  less than 10 seconds runtime, VM: 2812 average and RSS 2964 average as well.">
+      <created>1642987802997</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1642987802997</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +382,8 @@
     <MESSAGE value="Implement the nor2 function" />
     <MESSAGE value="Fixed test for all functions" />
     <MESSAGE value="optimized to 36 min" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimized to 36 min" />
+    <MESSAGE value="optimized to  less than 10 seconds runtime, VM: 2812 average and RSS 2964 average as well." />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized to  less than 10 seconds runtime, VM: 2812 average and RSS 2964 average as well." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

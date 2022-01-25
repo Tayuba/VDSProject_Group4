@@ -23,7 +23,7 @@ namespace ClassProject {
             BDD_ID top;
         };
 
-//        std::vector<BDDnode> unique_table;
+
 
         struct c_read {
             BDD_ID f;
@@ -37,9 +37,10 @@ namespace ClassProject {
             BDD_ID h;
 
         };
+
+        std::vector<BDDnode> unique_table;
         std::unordered_map<BDD_ID , LookUp>c_Table;
         std::vector<c_read> computedTable;
-        std::unordered_map<BDD_ID , BDDnode>u_Table;
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);
@@ -73,14 +74,13 @@ namespace ClassProject {
             BDDnode T = {1,"True",1,1,1};
 
 
-            u_Table.insert({0, F});
-            u_Table.insert({1, T});
-//            unique_table.push_back(F);
-//            unique_table.push_back(T);
+
+            unique_table.push_back(F);
+            unique_table.push_back(T);
 
         }
     virtual    ~Manager(){
-            u_Table.erase(u_Table.begin());
+        unique_table.erase(unique_table.begin());
         }
 
     };

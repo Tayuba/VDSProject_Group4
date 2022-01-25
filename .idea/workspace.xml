@@ -24,7 +24,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="" />
+    <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +83,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
-  <component name="RunManager" selected="CMake Application.VDSProject_bench">
+  <component name="RunManager" selected="CMake Application.VDSProject_verify">
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -182,7 +184,7 @@
       <workItem from="1642677089585" duration="437000" />
       <workItem from="1642691384962" duration="2121000" />
       <workItem from="1642904093012" duration="53513000" />
-      <workItem from="1643121343644" duration="744000" />
+      <workItem from="1643121343644" duration="3630000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>
@@ -359,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643121959427</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="optimized to  less than 10 seconds runtime, VM: 2812 average and RSS 2964 average as well.">
+      <created>1643122256328</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1643122256328</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

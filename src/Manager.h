@@ -23,24 +23,22 @@ namespace ClassProject {
             BDD_ID top;
         };
 
-
-
-        struct c_read {
+        struct Tuple {
             BDD_ID f;
             BDD_ID g;
             BDD_ID h;
-            BDD_ID Node_Id;
+
         };
-        struct LookUp {
-            BDD_ID f;
-            BDD_ID g;
-            BDD_ID h;
 
+        struct KeyHasher{
+            static BDD_ID Hasher(Tuple &t) {
+                return t.f + t.g + t.h;
+            }
         };
 
         std::vector<BDDnode> unique_table;
-        std::unordered_map<BDD_ID , LookUp>c_Table;
-        std::vector<c_read> computedTable;
+        std::unordered_map<Tuple, BDD_ID,KeyHasher>computed_table;
+        std::unordered_map<BDD_ID,Tuple> inverse_table;
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);

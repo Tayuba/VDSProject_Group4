@@ -35,17 +35,17 @@
     }
 
     bool ClassProject::Manager::getComputedTable(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &Node_Id){
-        c_read check = {i, t, e, Node_Id};
+        Tuple check = {i, t, e};
 
 //        for(auto j : c_Table)
 //        {
-        auto search = c_Table.find(Node_Id);
-        if (search != c_Table.end()){
-            if(check.f && check.g && check.h && check.Node_Id == search->first) {
-                Node_Id = check.Node_Id;
-                return true;
-            }
-        }
+//        for(const auto& j: computed_table);
+//        if (j.first){
+//            if(check.f && check.g && check.h && check.Node_Id == search->first) {
+//                Node_Id = check.Node_Id;
+//                return true;
+//            }
+//        }
 //        }
 //        if(check.f == c_Table.f && check.g == j.second.g && check.h == j.second.h ){
 //            Node_Id = c_Table.find(Node_Id);
@@ -140,6 +140,7 @@
         else if(t == True() && e == False()) {
             return i;
         }
+        //computed table
         else{
             topVariables={topVar(i), topVar(t), topVar(e)};
             topVariables.erase(0);
@@ -155,6 +156,7 @@
             tableSize = uniqueTableSize();
             newNode = {tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
+            //inverse table
             for(int j=2; j<tableSize; j++){
                 existingNode = ClassProject::Manager::unique_table[j];
                 if(existingNode.high==newNode.high && existingNode.low==newNode.low && existingNode.top==newNode.top) {

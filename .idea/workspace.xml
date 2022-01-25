@@ -26,8 +26,15 @@
   <component name="ChangeListManager">
     <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="optimized to  less than 10 seconds runtime, VM: 2812 average and RSS 2964 average as well.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/bench/VDSProject_bench" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/src/bench/VDSProject_bench" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/libManager.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/src/libManager.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/test/VDSProject_test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/src/test/VDSProject_test.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/verify/VDSProject_verify.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/src/verify/VDSProject_verify.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +58,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/bench/BenchParser.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/bench/bench_grammar.hpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/bench/main_bench.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/bench/BenchParser.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/CMakeLists.txt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/bench/BenchmarkLib.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/bench/main_bench.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CMakeLists.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/bench/CircuitToBDD.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CMakeLists.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/bench/BenchParser.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/bench/bench_grammar.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/bench/BenchmarkLib.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,7 +92,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
-  <component name="RunManager" selected="CMake Application.VDSProject_bench">
+  <component name="RunManager" selected="CMake Application.VDSProject_verify">
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -117,7 +124,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VDSProject_verify" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_verify" CONFIG_NAME="Release-WSL" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_verify">
+    <configuration name="VDSProject_verify" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/mnt/e/Embedde Computing Systems/Verification of Digital Systems/class project/Part_2/results/results_c3540/txt/3195.txt&quot; &quot;/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/bench/results_c3540/txt/3195.txt&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_verify" CONFIG_NAME="Release-WSL" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_verify">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -137,7 +144,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="gtest" CONFIG_NAME="Release-WSL">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_test" CONFIG_NAME="Release-WSL" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_test">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -186,6 +193,7 @@
       <workItem from="1642677089585" duration="437000" />
       <workItem from="1642691384962" duration="2121000" />
       <workItem from="1642904093012" duration="53513000" />
+      <workItem from="1643121343644" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>

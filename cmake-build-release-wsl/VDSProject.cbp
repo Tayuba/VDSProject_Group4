@@ -640,7 +640,6 @@
 			<Option target="Benchmark"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/src/bench/main_bench.cpp">
-			<Option target="VDSProject"/>
 			<Option target="VDSProject_bench"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/src/bench/skip_parser.hpp">
@@ -653,7 +652,6 @@
 			<Option target="VDSProject_test"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/src/verify/main_verify.cpp">
-			<Option target="VDSProject"/>
 			<Option target="VDSProject_verify"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/CMakeLists.txt">

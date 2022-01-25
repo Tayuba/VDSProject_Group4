@@ -184,13 +184,15 @@
         return ite(a, 1, b);
 }
     ClassProject::BDD_ID ClassProject::Manager::xor2(BDD_ID a, BDD_ID b){
-        BDD_ID negB = neg(b);
-        return ite(a, negB, b);
+//        BDD_ID negB = neg(b);
+        return ite(a, neg(b), b);
 }
     ClassProject::BDD_ID ClassProject::Manager::nand2(BDD_ID a, BDD_ID b){
-        BDD_ID And = and2(a, b);
-        BDD_ID nand = neg(And);
-        return nand;
+//        BDD_ID And = and2(a, b);
+//        BDD_ID nand = neg(And);
+//        return nand;
+        return neg(and2(a, b));
+//        return ite(a, neg(b), 0);
 }
     ClassProject::BDD_ID ClassProject::Manager::nor2(BDD_ID a, BDD_ID b){
         BDD_ID Or = or2(a, b);
@@ -207,51 +209,69 @@
         BDD_ID topVariable = topVar(root);
         return ClassProject::Manager::u_Table[topVariable].label;
 }
-
-    void ClassProject::Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){
-
+    void ClassProject::Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) {
         nodes_of_root.insert(root);
-
-        BDD_ID currentNode = root;
-        bool terminalHigh = false;
-        bool terminalLow = false;
-
-        //loop on the right side of the tree
-        while(!terminalHigh){
-            //to exclude the 0 and 1 constants
-            if(currentNode > 1) {
-                nodes_of_root.insert(ClassProject::Manager::u_Table[currentNode].high);
-                currentNode = ClassProject::Manager::u_Table[currentNode].high;
-            }
-            else
-                terminalHigh = true;
-        }
-
-        //restore the current  node back to the given one to keep searching in the second half of the tree
-        currentNode = root;
-
-        //loop on the left side of the tree
-        while(!terminalLow){
-            //to exclude the 0 and 1 constants
-            if(currentNode > 1) {
-                nodes_of_root.insert(ClassProject::Manager::u_Table[currentNode].low);
-                currentNode = ClassProject::Manager::u_Table[currentNode].low;
-            }
-            else
-                terminalLow = true;
-        }
-}
-
-    void ClassProject::Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root){
-        std::set<BDD_ID> nodes_of_root;
-        findNodes(root, nodes_of_root);
-
-        auto setItr= nodes_of_root.begin();
-
-        for (int i = 0; i<nodes_of_root.size();i++){
-            BDD_ID topVariable = topVar(*setItr);
-            vars_of_root.insert(topVariable);
-            setItr++;
+        if(root > 1) {
+            findNodes(coFactorTrue(root), nodes_of_root);
+            findNodes(coFactorFalse(root), nodes_of_root);
         }
 
 }
+//    void ClassProject::Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){
+//
+//        nodes_of_root.insert(root);
+//
+//        BDD_ID currentNode = root;
+//        bool terminalHigh = false;
+//        bool terminalLow = false;
+//
+//        //loop on the right side of the tree
+//        while(!terminalHigh){
+//            //to exclude the 0 and 1 constants
+//            if(currentNode > 1) {
+//                nodes_of_root.insert(ClassProject::Manager::u_Table[currentNode].high);
+//                currentNode = ClassProject::Manager::u_Table[currentNode].high;
+//            }
+//            else
+//                terminalHigh = true;
+//        }
+//
+//        //restore the current  node back to the given one to keep searching in the second half of the tree
+//        currentNode = root;
+//
+//        //loop on the left side of the tree
+//        while(!terminalLow){
+//            //to exclude the 0 and 1 constants
+//            if(currentNode > 1) {
+//                nodes_of_root.insert(ClassProject::Manager::u_Table[currentNode].low);
+//                currentNode = ClassProject::Manager::u_Table[currentNode].low;
+//            }
+//            else
+//                terminalLow = true;
+//        }
+//}
+
+    void ClassProject::Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) {
+        std::set<BDD_ID> nodes;
+        findNodes(root, nodes);
+        nodes.erase(1);
+        nodes.erase(0);
+        for(auto x: nodes){
+            vars_of_root.insert(topVar(x));
+        }
+
+}
+
+//    void ClassProject::Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root){
+//        std::set<BDD_ID> nodes_of_root;
+//        findNodes(root, nodes_of_root);
+//
+//        auto setItr= nodes_of_root.begin();
+//
+//        for (int i = 0; i<nodes_of_root.size();i++){
+//            BDD_ID topVariable = topVar(*setItr);
+//            vars_of_root.insert(topVariable);
+//            setItr++;
+//        }
+//
+//}

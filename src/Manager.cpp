@@ -159,22 +159,49 @@
                 return highSuccessor;
 
             tableSize = uniqueTableSize();
-            newNode = {tableSize,"",highSuccessor,lowSuccessor,topVariable};
+            newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
-            //inverse table
-            for(int j=2; j<tableSize; j++){
-                existingNode = ClassProject::Manager::unique_table[j];
-                if(existingNode.high==newNode.high && existingNode.low==newNode.low && existingNode.top==newNode.top) {
-                    return existingNode.node_id;
+//            //inverse table
+//            for(int j=2; j<tableSize; j++){
+//                existingNode = ClassProject::Manager::unique_table[j];
+//                if(existingNode.high==newNode.high && existingNode.low==newNode.low && existingNode.top==newNode.top) {
+//                    return existingNode.node_id;
+//                }
+//            }
+
+
+                if(get_Inverse_Table(highSuccessor,lowSuccessor,topVariable,nodeID))
+                {
+                    return nodeID;
                 }
-            }
+
 
                 ClassProject::Manager::unique_table.push_back(newNode);
+                Update_Inverse_Table(highSuccessor,lowSuccessor,topVariable,newNode.node_id);
                 update_computed_table(i,t,e,newNode.node_id);
                 return newNode.node_id;
 
     }
 }
+
+    void ClassProject::Manager::Update_Inverse_Table( BDD_ID H, BDD_ID L,BDD_ID Top, BDD_ID &node_id){
+
+        std::string Key = std::to_string(H) + "_" + std::to_string(L) + "_" + std::to_string(Top);
+        inverse_table.insert({{Key},{node_id}});
+}
+
+    bool ClassProject::Manager::get_Inverse_Table(BDD_ID H, BDD_ID L,BDD_ID Top, BDD_ID &nodeID) {
+
+    std::string Key = std::to_string(H) + "_" + std::to_string(L) + "_" + std::to_string(Top);
+    auto found = inverse_table.find(Key);
+
+    if(found != inverse_table.end()) {
+        nodeID = found->second;
+        return true;
+    }
+    return false;
+}
+
 
     bool ClassProject::Manager::isConstant(BDD_ID f){
         if(f==0 || f==1)

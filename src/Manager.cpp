@@ -99,34 +99,22 @@
             tableSize = uniqueTableSize();
             newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
-            if(get_Inverse_Table(highSuccessor,lowSuccessor,topVariable,nodeID))
-                    return nodeID;
+            std::string key_r = std::to_string(highSuccessor) + "/" + std::to_string(lowSuccessor) + "/" + std::to_string(topVariable);
 
+            auto alreadyIn = inverse_table.find(key_r);
+
+            if(alreadyIn != inverse_table.end()) {
+                nodeID = alreadyIn->second;
+                return nodeID;
+            }
+
+            inverse_table.insert({{key_r},{newNode.node_id}});
 
             ClassProject::Manager::unique_table.push_back(newNode);
-            Update_Inverse_Table(highSuccessor,lowSuccessor,topVariable,newNode.node_id);
             update_computed_table(i,t,e,newNode.node_id);
             return newNode.node_id;
 
     }
-}
-
-    void ClassProject::Manager::Update_Inverse_Table( BDD_ID H, BDD_ID L,BDD_ID Top, BDD_ID &node_id){
-
-        std::string Key = std::to_string(H) + "_" + std::to_string(L) + "_" + std::to_string(Top);
-        inverse_table.insert({{Key},{node_id}});
-}
-
-    bool ClassProject::Manager::get_Inverse_Table(BDD_ID H, BDD_ID L,BDD_ID Top, BDD_ID &nodeID) {
-
-    std::string Key = std::to_string(H) + "_" + std::to_string(L) + "_" + std::to_string(Top);
-    auto found = inverse_table.find(Key);
-
-    if(found != inverse_table.end()) {
-        nodeID = found->second;
-        return true;
-    }
-    return false;
 }
 
 
@@ -200,7 +188,6 @@
         return ite(a, neg(b), b);
 }
     ClassProject::BDD_ID ClassProject::Manager::nand2(BDD_ID a, BDD_ID b){
-
         return neg(and2(a, b));
 
 }
@@ -238,5 +225,4 @@
         }
 
 }
-
 

@@ -52,8 +52,7 @@ namespace ClassProject {
         void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
         void update_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &node_id);
         bool get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &nodeID);
-        void Update_Inverse_Table(ClassProject::BDD_ID H, ClassProject::BDD_ID L, ClassProject::BDD_ID Top,BDD_ID &node_id);
-        bool get_Inverse_Table(BDD_ID H, BDD_ID L,BDD_ID Top, BDD_ID &node_id);
+
 
 
     public:  Manager(){

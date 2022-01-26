@@ -41,15 +41,16 @@
 
 }
 
-    bool ClassProject::Manager::get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e) {
+    bool ClassProject::Manager::get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &nodeID) {
 
         std::string key = std::to_string(i) + "_" + std::to_string(t) + "_" + std::to_string(e);
 
         auto found = computed_table.find(key);
 
-        if(found != computed_table.end())
+        if(found != computed_table.end()) {
+            nodeID = found->second;
             return true;
-
+        }
         return false;
 }
 
@@ -124,6 +125,7 @@
         BDDnode newNode;
         size_t tableSize ;
         BDDnode existingNode;
+        BDD_ID nodeID;
 
         //terminal cases
         if (i == True()) {
@@ -140,11 +142,9 @@
         }
         //computed table
 
-        else if(get_computed_table(i,t,e))
+        else if(get_computed_table(i,t,e, nodeID))
         {
-            std::string key = std::to_string(i) + "_" + std::to_string(t) + "_" + std::to_string(e);
-            BDD_ID r = computed_table.find(key)->second;
-            return r;
+            return nodeID;
         }
         else{
             topVariables={topVar(i), topVar(t), topVar(e)};

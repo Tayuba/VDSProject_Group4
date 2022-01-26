@@ -58,7 +58,7 @@ namespace ClassProject {
         void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root);
         void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
         void update_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &node_id);
-        bool get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e);
+        bool get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &nodeID);
         BDD_ID find_or_add_unique_table(BDD_ID highSuccessor, BDD_ID lowSuccessor, BDD_ID topVariable);
 
 

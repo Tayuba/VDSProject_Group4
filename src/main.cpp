@@ -16,20 +16,11 @@ using namespace ClassProject;
         BDD_ID id3 = m->createVar("c");
         BDD_ID id4 = m->createVar("d");
 
-        BDD_ID f = m-> and2(m->or2(2, 3),m->and2(4, 5));
+        BDD_ID f = m-> and2(m->and2(id3, id4),m->or2(id1, id2));
 
-
-//        Manager::BDDnode lastNode = {f+1, "f", m->unique_table[f].high, m->unique_table[f].low, 2};
-//        BDD_ID last = m->uniqueTableSize()-1;
-//        std::cout<< m->unique_table[last].high<< std::endl<< m->unique_table[last].low<<std::endl;
-
-//        m->unique_table.push_back(lastNode);
-//        std::cout<< m->uniqueTableSize();
 
         std::cout<< m->unique_table[f].high << std::endl<< m->unique_table[f].low<<std::endl;
 
-
-//        std::cout<< lastNode.node_id << std::endl;
 
         return 0;
     }

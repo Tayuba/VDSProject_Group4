@@ -11,7 +11,10 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 /cmake-build-debug
+/cmake-build-release
+/cmake-build-release-wsl
 /build
+/.idea
 .DS_Store
 ### CMake Patch ###
 # External projects

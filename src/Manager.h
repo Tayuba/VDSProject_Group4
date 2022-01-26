@@ -23,22 +23,17 @@ namespace ClassProject {
             BDD_ID top;
         };
 
-        struct Tuple {
-            BDD_ID f;
-            BDD_ID g;
-            BDD_ID h;
+//        struct Tuple {
+//            BDD_ID f;
+//            BDD_ID g;
+//            BDD_ID h;
+//
+//        };
 
-        };
-
-        struct KeyHasher{
-            static BDD_ID Hasher(Tuple &t) {
-                return t.f + t.g + t.h;
-            }
-        };
 
         std::vector<BDDnode> unique_table;
-        std::unordered_map<Tuple, BDD_ID,KeyHasher>computed_table;
-        std::unordered_map<BDD_ID,Tuple> inverse_table;
+        std::unordered_map<std::string, BDD_ID>computed_table;
+//        std::unordered_map<> inverse_table;
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);
@@ -62,7 +57,8 @@ namespace ClassProject {
         std::string getTopVarName(const BDD_ID &root);
         void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root);
         void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
-        bool getComputedTable(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &Node_Id);
+        void update_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &node_id);
+        bool get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e);
         BDD_ID find_or_add_unique_table(BDD_ID highSuccessor, BDD_ID lowSuccessor, BDD_ID topVariable);
 
 

@@ -34,23 +34,21 @@
         return unique_table[f].top;
     }
 
-    bool ClassProject::Manager::getComputedTable(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &Node_Id){
-        Tuple check = {i, t, e};
+    void ClassProject::Manager::update_computed_table(const BDD_ID i,const BDD_ID t, const BDD_ID e, BDD_ID &node_id){
 
-//        for(auto j : c_Table)
-//        {
-//        for(const auto& j: computed_table);
-//        if (j.first){
-//            if(check.f && check.g && check.h && check.Node_Id == search->first) {
-//                Node_Id = check.Node_Id;
-//                return true;
-//            }
-//        }
-//        }
-//        if(check.f == c_Table.f && check.g == j.second.g && check.h == j.second.h ){
-//            Node_Id = c_Table.find(Node_Id);
-//            return true;
-//        }
+        std::string key = std::to_string(i) + "_" + std::to_string(t) + "_" + std::to_string(e);
+        computed_table.insert({{key},{node_id}});
+
+}
+
+    bool ClassProject::Manager::get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e) {
+
+        std::string key = std::to_string(i) + "_" + std::to_string(t) + "_" + std::to_string(e);
+
+        auto found = computed_table.find(key);
+
+        if(found != computed_table.end())
+            return true;
 
         return false;
 }
@@ -141,6 +139,13 @@
             return i;
         }
         //computed table
+
+        else if(get_computed_table(i,t,e))
+        {
+            std::string key = std::to_string(i) + "_" + std::to_string(t) + "_" + std::to_string(e);
+            BDD_ID r = computed_table.find(key)->second;
+            return r;
+        }
         else{
             topVariables={topVar(i), topVar(t), topVar(e)};
             topVariables.erase(0);
@@ -165,8 +170,8 @@
             }
 
                 ClassProject::Manager::unique_table.push_back(newNode);
+                update_computed_table(i,t,e,newNode.node_id);
                 return newNode.node_id;
-
 
     }
 }

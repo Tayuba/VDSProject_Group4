@@ -23,13 +23,6 @@ namespace ClassProject {
             BDD_ID top;
         };
 
-//        struct Tuple {
-//            BDD_ID f;
-//            BDD_ID g;
-//            BDD_ID h;
-//
-//        };
-
 
         std::vector<BDDnode> unique_table;
         std::unordered_map<std::string, BDD_ID>computed_table;
@@ -59,7 +52,6 @@ namespace ClassProject {
         void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
         void update_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &node_id);
         bool get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &nodeID);
-        BDD_ID find_or_add_unique_table(BDD_ID highSuccessor, BDD_ID lowSuccessor, BDD_ID topVariable);
         void Update_Inverse_Table(ClassProject::BDD_ID H, ClassProject::BDD_ID L, ClassProject::BDD_ID Top,BDD_ID &node_id);
         bool get_Inverse_Table(BDD_ID H, BDD_ID L,BDD_ID Top, BDD_ID &node_id);
 

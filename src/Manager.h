@@ -36,12 +36,9 @@ namespace ClassProject {
 
 
         std::vector<BDDnode> unique_table;
-//        std::unordered_map<std::string, BDD_ID>computed_table;
         std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> computed_table;
         std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> inverse_table;
-//        std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> l_Table;
-        std::unordered_map<BDD_ID, std::string> l_Table;
-//        std::unordered_map<std::string, BDD_ID> inverse_table;
+
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);

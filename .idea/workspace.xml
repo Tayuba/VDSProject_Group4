@@ -25,8 +25,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_31__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_33__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_01_2022_23_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_01_2022_23_11__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/bench/VDSProject_bench" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/src/libManager.a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
@@ -120,7 +125,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VDSProject_verify" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/mnt/e/Embedde Computing Systems/Verification of Digital Systems/class project/Part_2/results/results_c3540/txt/3195.txt&quot; &quot;/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/cmake-build-release-wsl/src/bench/results_c3540/txt/3195.txt&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_verify" CONFIG_NAME="Release-WSL" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_verify">
+    <configuration name="VDSProject_verify" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/mnt/e/Embedde Computing Systems/Verification of Digital Systems/class project/Part_2/results/results_c3540/txt/4667.txt&quot; &quot;/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/cmake-build-release/src/bench/results_c3540/txt/4667.txt&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_verify" CONFIG_NAME="Release-WSL" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_verify">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>

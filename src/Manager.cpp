@@ -7,15 +7,6 @@ size_t ClassProject::Manager::uniqueTableSize() {
 
 ClassProject::BDD_ID ClassProject::Manager::createVar(const std::string &label) {
     size_t sizeOfTable = uniqueTableSize();
-
-//    auto i : l_Table.find(label);
-//
-//    if(alreadyIn != inverse_table.end()) {
-//        nodeID = alreadyIn->second;
-//        return nodeID;
-//    }
-
-//    inverse_table.insert({{highSuccessor, lowSuccessor, topVariable},{newNode.node_id}});
     for(const auto& i : unique_table) {
         if (i.label == label) {
             return i.node_id;
@@ -43,15 +34,11 @@ ClassProject::BDD_ID ClassProject::Manager::topVar(BDD_ID f) {
 }
 
 void ClassProject::Manager::update_computed_table(const BDD_ID i,const BDD_ID t, const BDD_ID e, BDD_ID &node_id){
-
-//    std::string key = std::to_string(i) + "_" + std::to_string(t) + "_" + std::to_string(e);
     computed_table.insert({{i, t, e},{node_id}});
 
 }
 
 bool ClassProject::Manager::get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &nodeID) {
-
-//    std::string key = std::to_string(i) + "_" + std::to_string(t) + "_" + std::to_string(e);
 
     auto found = computed_table.find({i, t, e});
 
@@ -108,7 +95,6 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
         tableSize = uniqueTableSize();
         newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
-//        std::string key_r = std::to_string(highSuccessor) + "/" + std::to_string(lowSuccessor) + "/" + std::to_string(topVariable);
 
         auto alreadyIn = inverse_table.find({highSuccessor, lowSuccessor, topVariable});
 

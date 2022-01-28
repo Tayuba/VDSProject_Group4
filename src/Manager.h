@@ -13,6 +13,17 @@ namespace ClassProject {
 
     class Manager : public ManagerInterface {
 
+        struct bDDHasher{
+            size_t operator() (const std::array<BDD_ID,3> &a) const{
+                size_t h = 0;
+
+                for(auto e: a){
+                    h ^= std::hash<BDD_ID>{}(e) + 0x9e3779b9 + (h << 6) + (h >> 2);
+                }
+                return h;
+            }
+        };
+
     public:
 
         struct BDDnode {
@@ -23,23 +34,14 @@ namespace ClassProject {
             BDD_ID top;
         };
 
-//        std::vector<BDDnode> unique_table;
 
-        struct c_read {
-            BDD_ID f;
-            BDD_ID g;
-            BDD_ID h;
-            BDD_ID Node_Id;
-        };
-        struct LookUp {
-            BDD_ID f;
-            BDD_ID g;
-            BDD_ID h;
-
-        };
-        std::unordered_map<BDD_ID , LookUp>c_Table;
-        std::vector<c_read> computedTable;
-        std::unordered_map<BDD_ID , BDDnode>u_Table;
+        std::vector<BDDnode> unique_table;
+//        std::unordered_map<std::string, BDD_ID>computed_table;
+        std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> computed_table;
+        std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> inverse_table;
+//        std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> l_Table;
+        std::unordered_map<BDD_ID, std::string> l_Table;
+//        std::unordered_map<std::string, BDD_ID> inverse_table;
 
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);
@@ -63,8 +65,9 @@ namespace ClassProject {
         std::string getTopVarName(const BDD_ID &root);
         void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root);
         void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
-        bool getComputedTable(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &Node_Id);
-        BDD_ID find_or_add_unique_table(BDD_ID highSuccessor, BDD_ID lowSuccessor, BDD_ID topVariable);
+        void update_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &node_id);
+        bool get_computed_table(const BDD_ID i, const BDD_ID t, const BDD_ID e, BDD_ID &nodeID);
+
 
 
     public:  Manager(){
@@ -73,14 +76,13 @@ namespace ClassProject {
             BDDnode T = {1,"True",1,1,1};
 
 
-            u_Table.insert({0, F});
-            u_Table.insert({1, T});
-//            unique_table.push_back(F);
-//            unique_table.push_back(T);
+
+            unique_table.push_back(F);
+            unique_table.push_back(T);
 
         }
-    virtual    ~Manager(){
-            u_Table.erase(u_Table.begin());
+        virtual    ~Manager(){
+            unique_table.erase(unique_table.begin());
         }
 
     };

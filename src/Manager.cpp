@@ -72,8 +72,6 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
         return t;
     }
     else if(t == True() && e == False()) {
-
-
         return i;
     }
 
@@ -97,7 +95,7 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
             return highSuccessor;
         }
         tableSize = uniqueTableSize();
-//        newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
+        newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
 
         auto alreadyIn = inverse_table.find({highSuccessor, lowSuccessor, topVariable});
@@ -109,10 +107,10 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
 
         inverse_table.insert({{highSuccessor, lowSuccessor, topVariable},{tableSize}});
 
-        ClassProject::Manager::unique_table.push_back({tableSize, "",highSuccessor, lowSuccessor, topVariable});
+        ClassProject::Manager::unique_table.push_back(newNode);
         update_computed_table(i,t,e,tableSize);
-//        return newNode.node_id;
-        return tableSize;
+        return newNode.node_id;
+
 
     }
 }
@@ -126,7 +124,7 @@ bool ClassProject::Manager::isConstant(BDD_ID f){
 }
 
 bool ClassProject::Manager::isVariable(BDD_ID x){
-    if(unique_table[x].label !="False" && unique_table[x].label !="True" && !unique_table[x].label.empty())
+    if(unique_table[x].top !=0 && unique_table[x].top !=1 && !unique_table[x].label.empty())
         return true;
     else
         return false;

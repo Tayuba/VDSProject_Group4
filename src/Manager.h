@@ -40,7 +40,6 @@ namespace ClassProject {
         std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> computed_table;
         std::unordered_map<std::array<BDD_ID,3>, BDD_ID, bDDHasher> inverse_table;
 
-
         size_t uniqueTableSize();
         BDD_ID createVar(const std::string &label);
         const BDD_ID &True();
@@ -79,6 +78,7 @@ namespace ClassProject {
             unique_table.push_back(T);
 
         }
+
         virtual    ~Manager(){
             unique_table.erase(unique_table.begin());
         }

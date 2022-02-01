@@ -14,6 +14,7 @@ _deps
 /cmake-build-release
 /cmake-build-release-wsl
 /build
+/.idea
 .DS_Store
 ### CMake Patch ###
 # External projects

@@ -2,6 +2,7 @@
 #include <algorithm>
 #include "iostream"
 
+
 size_t ClassProject::Manager::uniqueTableSize() {
     return ClassProject::Manager::unique_table.size();
 }
@@ -128,10 +129,12 @@ bool ClassProject::Manager::isVariable(BDD_ID x){
         return true;
     else
         return false;
+
 }
 
 ClassProject::BDD_ID ClassProject::Manager::coFactorTrue(BDD_ID f, BDD_ID x){
     BDD_ID F, T;
+
 
     if (isConstant(f) || isConstant(x) || ClassProject::Manager::unique_table[f].top > x)
         return f;
@@ -163,10 +166,12 @@ ClassProject::BDD_ID ClassProject::Manager::coFactorFalse(BDD_ID f, BDD_ID x){
 ClassProject::BDD_ID ClassProject::Manager:: coFactorTrue(BDD_ID f){
 
     return ClassProject::Manager::unique_table[f].high;
+
 }
 ClassProject::BDD_ID ClassProject::Manager:: coFactorFalse(BDD_ID f){
 
     return ClassProject::Manager::unique_table[f].low;
+
 
 }
 ClassProject::BDD_ID ClassProject::Manager::neg(BDD_ID a) {
@@ -181,6 +186,7 @@ ClassProject::BDD_ID ClassProject::Manager::or2(BDD_ID a, BDD_ID b){
 
     return ite(a, 1, b);
 }
+
 ClassProject::BDD_ID ClassProject::Manager::xor2(BDD_ID a, BDD_ID b){
 
     return ite(a, neg(b), b);
@@ -200,6 +206,7 @@ ClassProject::BDD_ID ClassProject::Manager::xnor2(BDD_ID a, BDD_ID b){
 std::string ClassProject::Manager::getTopVarName(const BDD_ID &root) {
     BDD_ID topVariable = topVar(root);
     return ClassProject::Manager::unique_table[topVariable].label;
+
 }
 void ClassProject::Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) {
     nodes_of_root.insert(root);
@@ -222,3 +229,4 @@ void ClassProject::Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_
 
 
 }
+

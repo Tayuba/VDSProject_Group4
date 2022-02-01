@@ -54,12 +54,6 @@ bool ClassProject::Manager::get_computed_table(const BDD_ID i, const BDD_ID t, c
 
 ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
 
-    std::set<BDD_ID> topVariables;
-    BDD_ID topVariable;
-    BDD_ID highSuccessor;
-    BDD_ID lowSuccessor;
-    BDDnode newNode;
-    size_t tableSize ;
     BDD_ID nodeID;
 
     //terminal cases
@@ -76,27 +70,26 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
         return i;
     }
 
-
     else if(get_computed_table(i,t,e, nodeID))
     {
         return nodeID;
     }
 
     else{
-        topVariables={topVar(i), topVar(t), topVar(e)};
+        std::set<BDD_ID> topVariables = {topVar(i), topVar(t), topVar(e)};
         topVariables.erase(0);
         topVariables.erase(1);
-        topVariable = *(--topVariables.rend());
+        BDD_ID topVariable = *(--topVariables.rend());
 
-        highSuccessor=ite(coFactorTrue(i,topVariable), coFactorTrue(t,topVariable), coFactorTrue(e,topVariable));
-        lowSuccessor=ite(coFactorFalse(i,topVariable), coFactorFalse(t,topVariable), coFactorFalse(e,topVariable));
+        BDD_ID highSuccessor=ite(coFactorTrue(i,topVariable), coFactorTrue(t,topVariable), coFactorTrue(e,topVariable));
+        BDD_ID lowSuccessor=ite(coFactorFalse(i,topVariable), coFactorFalse(t,topVariable), coFactorFalse(e,topVariable));
 
         if(highSuccessor==lowSuccessor) {
             computed_table[{i, t, e}] = highSuccessor;
             return highSuccessor;
         }
-        tableSize = uniqueTableSize();
-        newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
+        size_t tableSize = uniqueTableSize();
+        BDDnode newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
 
         auto alreadyIn = inverse_table.find({highSuccessor, lowSuccessor, topVariable});

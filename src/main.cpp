@@ -19,7 +19,7 @@ using namespace ClassProject;
         BDD_ID f = m-> and2(m->and2(id3, id4),m->or2(id1, id2));
 
 
-        std::cout<< m->u_Table[f].high << std::endl<< m->u_Table[f].low<<std::endl;
+        std::cout<< m->unique_table[f].high << std::endl<< m->unique_table[f].low<<std::endl;
 
 
         return 0;

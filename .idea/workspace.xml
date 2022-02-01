@@ -24,13 +24,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a0f177-0958-48e1-860c-04b08c741ad2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_31__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_01_2022_18_33__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_01_2022_23_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_01_2022_23_11__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/VDSProject.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/src/test/VDSProject_test.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release-wsl/VDSProject.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,17 +112,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VDSProject_bench" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/benchmarks/iscas85/c432.bench" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_bench" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_bench">
+    <configuration name="VDSProject_bench" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/benchmarks/iscas85/c3540.bench" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_bench" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_bench">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VDSProject_verify" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/mnt/e/Embedde Computing Systems/Verification of Digital Systems/class project/Part_2/results/results_c3540/txt/4667.txt&quot; &quot;/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/cmake-build-release/src/bench/results_c3540/txt/4667.txt&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_verify" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_verify">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="VDSProject_verify" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/mnt/e/Embedde Computing Systems/Verification of Digital Systems/class project/Part_2/results/results_c3540/txt/4028.txt&quot; &quot;/mnt/c/Users/ayuba/CLionProjects/VDSProject_Group4/cmake-build-release/src/bench/results_c3540/txt/4028.txt&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VDSProject" TARGET_NAME="VDSProject_verify" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="VDSProject" RUN_TARGET_NAME="VDSProject_verify">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -190,6 +182,9 @@
       <workItem from="1642691384962" duration="2121000" />
       <workItem from="1642904093012" duration="53513000" />
       <workItem from="1643121343644" duration="3630000" />
+      <workItem from="1643446911028" duration="9281000" />
+      <workItem from="1643565106737" duration="1379000" />
+      <workItem from="1643730278397" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Create a test for coFactorTrue function">
       <created>1640378509745</created>

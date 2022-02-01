@@ -1,5 +1,6 @@
 #include "Manager.h"
 #include <algorithm>
+#include "iostream"
 
 size_t ClassProject::Manager::uniqueTableSize() {
     return ClassProject::Manager::unique_table.size();
@@ -58,7 +59,6 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
     BDD_ID lowSuccessor;
     BDDnode newNode;
     size_t tableSize ;
-    BDDnode existingNode;
     BDD_ID nodeID;
 
     //terminal cases
@@ -72,14 +72,17 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
         return t;
     }
     else if(t == True() && e == False()) {
+
+
         return i;
     }
-        //computed table
+
 
     else if(get_computed_table(i,t,e, nodeID))
     {
         return nodeID;
     }
+
     else{
         topVariables={topVar(i), topVar(t), topVar(e)};
         topVariables.erase(0);
@@ -89,11 +92,12 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
         highSuccessor=ite(coFactorTrue(i,topVariable), coFactorTrue(t,topVariable), coFactorTrue(e,topVariable));
         lowSuccessor=ite(coFactorFalse(i,topVariable), coFactorFalse(t,topVariable), coFactorFalse(e,topVariable));
 
-        if(highSuccessor==lowSuccessor)
+        if(highSuccessor==lowSuccessor) {
+            computed_table[{i, t, e}] = highSuccessor;
             return highSuccessor;
-
+        }
         tableSize = uniqueTableSize();
-        newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
+//        newNode = { tableSize,"",highSuccessor,lowSuccessor,topVariable};
 
 
         auto alreadyIn = inverse_table.find({highSuccessor, lowSuccessor, topVariable});
@@ -103,11 +107,12 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
             return nodeID;
         }
 
-        inverse_table.insert({{highSuccessor, lowSuccessor, topVariable},{newNode.node_id}});
+        inverse_table.insert({{highSuccessor, lowSuccessor, topVariable},{tableSize}});
 
-        ClassProject::Manager::unique_table.push_back(newNode);
-        update_computed_table(i,t,e,newNode.node_id);
-        return newNode.node_id;
+        ClassProject::Manager::unique_table.push_back({tableSize, "",highSuccessor, lowSuccessor, topVariable});
+        update_computed_table(i,t,e,tableSize);
+//        return newNode.node_id;
+        return tableSize;
 
     }
 }
@@ -183,18 +188,15 @@ ClassProject::BDD_ID ClassProject::Manager::xor2(BDD_ID a, BDD_ID b){
     return ite(a, neg(b), b);
 }
 ClassProject::BDD_ID ClassProject::Manager::nand2(BDD_ID a, BDD_ID b){
+//    return ite(a, n)
     return neg(and2(a, b));
 
 }
 ClassProject::BDD_ID ClassProject::Manager::nor2(BDD_ID a, BDD_ID b){
-    BDD_ID Or = or2(a, b);
-    BDD_ID nor = neg(Or);
-    return nor;
+    return neg(or2(a, b));
 }
 ClassProject::BDD_ID ClassProject::Manager::xnor2(BDD_ID a, BDD_ID b){
-    BDD_ID Xor = xor2(a, b);
-    BDD_ID xnor = neg(Xor);
-    return xnor;
+    return neg(xor2(a, b));
 }
 
 std::string ClassProject::Manager::getTopVarName(const BDD_ID &root) {
@@ -217,6 +219,8 @@ void ClassProject::Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_
     nodes.erase(0);
     for(auto x: nodes){
         vars_of_root.insert(topVar(x));
+
     }
+
 
 }

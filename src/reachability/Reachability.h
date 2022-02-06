@@ -14,16 +14,16 @@ namespace ClassProject {
     class Reachability : public ReachabilityInterface {
 
     public:
-        struct state{
-        BDD_ID state_id;
-        std::string state_label;
-        BDD_ID value;
-
-    };
-        std::vector<state> current_states;
-        std::vector<state> next_states;
+//        struct state{
+//        BDD_ID state_id;
+//        std::string state_label;
+//        BDD_ID value;
+//
+//    };
+        std::vector<BDD_ID> current_states;
+        std::vector<BDD_ID> next_states;
         std::vector<BDD_ID> transition_functions;
-        std::vector<state> initial_states;
+        std::vector<BDD_ID> initial_states;
 
 
     public:
@@ -34,18 +34,19 @@ namespace ClassProject {
             else {
 
                 BDD_ID id1, id2;
-                state s;
-                for (int i = 0; i <= stateSize; i++) {
+//                state s;
+                for (int i = 0; i < stateSize; i++) {
                     id1 = Manager::createVar("s" + std::to_string(i));
-                    s = {id1, "s" + std::to_string(i), 0};
-                    current_states.push_back(s);
-                    transition_functions.push_back(0);
+//                    s = {id1, "s" + std::to_string(i), 0};
+                    initial_states.push_back(0);
+                    current_states.push_back(id1);
+                    transition_functions.push_back(id1);
 
                 }
-                for (unsigned int j = stateSize + 1; j <= 2 * stateSize; j++) {
+                for (int j = 0; j < stateSize; j++) {
                     id2 = Manager::createVar("s'" + std::to_string(j));
-                    s = {id2, "s'" + std::to_string(j), 0};
-                    next_states.push_back(s);
+//                    s = {id2, "s'" + std::to_string(j), 0};
+                    next_states.push_back(id2);
 
                 }
             }

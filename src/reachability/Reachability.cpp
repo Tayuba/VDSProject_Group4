@@ -5,7 +5,10 @@
 
 #include "Reachability.h"
 
-void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {
 
 
-}
+
+//void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {
+//
+//
+//}

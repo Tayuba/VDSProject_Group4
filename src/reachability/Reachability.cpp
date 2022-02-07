@@ -38,6 +38,21 @@ ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation() {
 
     return transition_relation;
 }
+
+ClassProject::BDD_ID ClassProject::Reachability::compute_characteristic_function(){
+
+    int current_states_size = current_states.size();
+    BDD_ID char_function = 1;
+    BDD_ID xnor_1;
+
+    for(int i=0; i<current_states_size;i++){
+        xnor_1 = Manager::xnor2(current_states[i],initial_states[i]);
+        char_function = Manager::and2(xnor_1,char_function);
+    }
+
+    return char_function;
+
+}
 //void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {
 //
 //

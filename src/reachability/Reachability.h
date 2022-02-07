@@ -57,7 +57,7 @@ namespace ClassProject {
         bool isReachable(const std::vector<bool> &stateVector);
         void setInitState(const std::vector<bool> &stateVector);
         BDD_ID compute_transition_relation();
-        BDD_ID compute_characteristic_function(std::vector<BDD_ID> stateVariables);
+        BDD_ID compute_characteristic_function();
 
 
 

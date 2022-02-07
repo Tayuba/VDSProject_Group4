@@ -5,7 +5,10 @@
 
 #include "Reachability.h"
 
+const std::vector<ClassProject::BDD_ID> &ClassProject::Reachability::getStates() const{
 
+        return current_states;
+}
 
 
 //void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {

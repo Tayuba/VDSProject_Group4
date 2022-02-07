@@ -23,7 +23,20 @@ void ClassProject::Reachability::setInitState(const std::vector<bool> &stateVect
         }
     }
 
+}
 
+ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation() {
+
+    int next_states_size = next_states.size();
+    BDD_ID transition_relation = 1;
+    BDD_ID xnor;
+
+    for(int i=0; i<next_states_size;i++){
+        xnor = Manager::xnor2(next_states[i],transition_functions[i]);
+        transition_relation = Manager::and2(xnor,transition_relation);
+    }
+
+    return transition_relation;
 }
 //void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {
 //

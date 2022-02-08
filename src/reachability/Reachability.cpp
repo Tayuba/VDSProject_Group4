@@ -29,7 +29,7 @@ void ClassProject::Reachability::setInitState(const std::vector<bool> &stateVect
 ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation() {
 
     int next_states_size = next_states.size();
-    BDD_ID transition_relation = 1;
+    transition_relation = 1;
     BDD_ID xnor;
 
     for(int i=0; i<next_states_size;i++){
@@ -44,7 +44,7 @@ ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation() {
 ClassProject::BDD_ID ClassProject::Reachability::compute_characteristic_function(){
 
     int current_states_size = current_states.size();
-    BDD_ID char_function = 1;
+    char_function = 1;
     BDD_ID xnor_1;
 
     for(int i=0; i<current_states_size;i++){
@@ -64,5 +64,4 @@ void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID
     for(int i=0; i<transitionFunctions.size();i++){
         transition_functions[i] = transitionFunctions[i];
     }
-
 }

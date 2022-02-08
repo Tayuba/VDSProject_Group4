@@ -24,7 +24,8 @@ namespace ClassProject {
         std::vector<BDD_ID> next_states;
         std::vector<BDD_ID> transition_functions;
         std::vector<BDD_ID> initial_states;
-
+        BDD_ID transition_relation;
+        BDD_ID char_function;
 
     public:
         explicit Reachability(unsigned int stateSize) : ReachabilityInterface(stateSize){

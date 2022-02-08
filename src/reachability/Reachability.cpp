@@ -25,6 +25,7 @@ void ClassProject::Reachability::setInitState(const std::vector<bool> &stateVect
 
 }
 
+//where do we call? in construcotr?
 ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation() {
 
     int next_states_size = next_states.size();
@@ -39,6 +40,7 @@ ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation() {
     return transition_relation;
 }
 
+//where do we call? in construcotr?
 ClassProject::BDD_ID ClassProject::Reachability::compute_characteristic_function(){
 
     int current_states_size = current_states.size();
@@ -53,7 +55,14 @@ ClassProject::BDD_ID ClassProject::Reachability::compute_characteristic_function
     return char_function;
 
 }
-//void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {
-//
-//
-//}
+void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {
+
+    if(transitionFunctions.size()!=current_states.size())
+        throw std::runtime_error("The number of given transition functions does not match the number of state bits");
+//How to check for unknown ID?
+
+    for(int i=0; i<transitionFunctions.size();i++){
+        transition_functions[i] = transitionFunctions[i];
+    }
+
+}

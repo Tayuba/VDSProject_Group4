@@ -50,6 +50,9 @@ namespace ClassProject {
                     next_states.push_back(id2);
 
                 }
+
+                char_function = compute_characteristic_function();
+                transition_relation = compute_transition_relation();
             }
     }
 

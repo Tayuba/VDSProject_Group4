@@ -62,6 +62,7 @@ namespace ClassProject {
         void setInitState(const std::vector<bool> &stateVector);
         BDD_ID compute_transition_relation();
         BDD_ID compute_characteristic_function();
+        BDD_ID symb_compute_reachable_states();
 
 
 

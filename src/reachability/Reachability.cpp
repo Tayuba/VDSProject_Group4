@@ -23,6 +23,8 @@ void ClassProject::Reachability::setInitState(const std::vector<bool> &stateVect
         }
     }
 
+    char_function = compute_characteristic_function();
+
 }
 
 //where do we call? in construcotr?
@@ -59,9 +61,15 @@ void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID
 
     if(transitionFunctions.size()!=current_states.size())
         throw std::runtime_error("The number of given transition functions does not match the number of state bits");
-//How to check for unknown ID?
+
+    for(unsigned long transitionFunction : transitionFunctions){
+        if(transitionFunction >= Manager::uniqueTableSize())
+            throw std::runtime_error("Unknown ID");
+    }
 
     for(int i=0; i<transitionFunctions.size();i++){
         transition_functions[i] = transitionFunctions[i];
     }
+
+    transition_relation = compute_transition_relation();
 }

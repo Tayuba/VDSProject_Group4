@@ -110,6 +110,7 @@ ClassProject::BDD_ID ClassProject::Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
 }
 
 
+
 bool ClassProject::Manager::isConstant(BDD_ID f){
     if(f==0 || f==1)
         return true;
@@ -159,6 +160,7 @@ ClassProject::BDD_ID ClassProject::Manager::coFactorFalse(BDD_ID f, BDD_ID x){
 ClassProject::BDD_ID ClassProject::Manager:: coFactorTrue(BDD_ID f){
 
     return ClassProject::Manager::unique_table[f].high;
+
 
 }
 ClassProject::BDD_ID ClassProject::Manager:: coFactorFalse(BDD_ID f){

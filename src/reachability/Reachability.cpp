@@ -23,36 +23,31 @@ void ClassProject::Reachability::setInitState(const std::vector<bool> &stateVect
         }
     }
 
-    char_function = compute_characteristic_function();
+    symb_compute_reachable_states();
 
 }
 
-ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation() {
+ClassProject::BDD_ID ClassProject::Reachability::compute_transition_relation(std::vector<BDD_ID>& next_states, std::vector<BDD_ID>& transition_functions) {
+    BDD_ID T = 1;
 
-    int next_states_size = next_states.size();
-    transition_relation = 1;
-    BDD_ID xnor;
-
-    for(int i=0; i<next_states_size;i++){
-        xnor = Manager::xnor2(next_states[i],transition_functions[i]);
-        transition_relation = Manager::and2(xnor,transition_relation);
+    for(int i=0; i<next_states.size();i++){
+        BDD_ID xnor = Manager::xnor2(next_states[i],transition_functions[i]);
+        T = Manager::and2(xnor,T);
     }
 
-    return transition_relation;
+    return T;
 }
 
-ClassProject::BDD_ID ClassProject::Reachability::compute_characteristic_function(){
+ClassProject::BDD_ID ClassProject::Reachability::compute_characteristic_function(std::vector<BDD_ID> current_states, std::vector<bool> initial_states){
 
-    int current_states_size = current_states.size();
-    char_function = 1;
-    BDD_ID xnor_1;
+    BDD_ID Cs = 1;
 
-    for(int i=0; i<current_states_size;i++){
-        xnor_1 = Manager::xnor2(current_states[i],initial_states[i]);
-        char_function = Manager::and2(xnor_1,char_function);
+    for(int i=0; i<current_states.size();i++){
+        BDD_ID xnor_1 = Manager::xnor2(current_states[i],initial_states[i]);
+        Cs = Manager::and2(xnor_1,Cs);
     }
 
-    return char_function;
+    return Cs;
 
 }
 void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) {
@@ -68,40 +63,59 @@ void ClassProject::Reachability::setTransitionFunctions(const std::vector<BDD_ID
     for(int i=0; i<transitionFunctions.size();i++){
         transition_functions[i] = transitionFunctions[i];
     }
+    symb_compute_reachable_states();
 
-    transition_relation = compute_transition_relation();
 }
 
 ClassProject::BDD_ID ClassProject::Reachability::symb_compute_reachable_states(){
-    BDD_ID cr_it, cr, temp1, temp2, temp3, temp4,temp5;
 
-    cr_it = char_function;
+    BDD_ID T = compute_transition_relation(next_states,transition_functions);
+    BDD_ID Cs = compute_characteristic_function(current_states, initial_states);
+    BDD_ID Cr_it = Cs;
+    BDD_ID Img, temp2, Cr;
 
     do{
-        cr = cr_it;
-        temp1 = Manager::and2(cr, transition_relation);
+         Cr = Cr_it;
+        BDD_ID temp1 = Manager::and2(Cr, T);
 
-        for(int i=current_states.size()-1; i>=0;i--){
-            temp2 = Manager::or2(coFactorTrue(temp1, current_states[i]),coFactorFalse(temp1,current_states[i]));
-            temp1 = temp2;
+        for(unsigned long current_state : current_states){
+            Img = Manager::or2(coFactorTrue(temp1, current_state),coFactorFalse(temp1,current_state));
         }
 
-        temp3 = 1;
-        BDD_ID xnor_1;
-        for(int i=0; i<current_states.size();i++){
-            xnor_1 = Manager::xnor2(current_states[i],next_states[i]);
-            temp3 = Manager::and2(xnor_1,temp3);
-        }
-        temp4 = Manager::and2(temp3,temp2);
-
-        for(int i=next_states.size()-1; i>=0;i--){
-            temp5 = Manager::or2(coFactorTrue(temp4, next_states[i]),coFactorFalse(temp4,next_states[i]));
-            temp4 = temp5;
+        for(int i = 0; i < next_states.size(); ++i){
+          temp2 = Manager::and2(Img, Manager::xnor2(current_states[i], next_states[i]));
         }
 
-        cr_it = Manager::or2(cr,temp5);
+        for(unsigned long next_state : next_states){
+            Img = Manager::or2(coFactorTrue(temp2, next_state),coFactorFalse(temp1, next_state));
+        }
+        Cr_it = Manager::or2(Cr,Img);
 
-    }  while(cr!=cr_it);
+    }  while(Cr != Cr_it);
 
-    return cr;
+    return Cr;
+}
+
+bool ClassProject:: Reachability :: isReachable(const std::vector<bool> &stateVector) {
+    BDD_ID isR = symb_compute_reachable_states();
+    if (stateVector.size() != current_states.size())
+        throw std::runtime_error("The number of size does not match the number of state bits");
+
+    else {
+
+        for (int i = 0; i < stateVector.size(); ++i) {
+
+            if (stateVector.at(i)) {
+                isR = coFactorTrue(isR, current_states[i]);
+            } else {
+                isR = coFactorFalse(isR, current_states[i]);
+            }
+
+            if (isR <= 1) {
+                return true;
+            }
+        }
+    }
+
+
 }

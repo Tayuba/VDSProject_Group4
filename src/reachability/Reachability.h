@@ -42,7 +42,7 @@ namespace ClassProject {
                     next_states.push_back(id2);
 
                 }
-               // symb_compute_reachable_states();
+               symb_compute_reachable_states();
             }
     }
 

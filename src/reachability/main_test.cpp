@@ -5,8 +5,18 @@
 #include "Tests.h"
 
 
-int main(int argc, char* argv[])
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+namespace ClassProject {
+
+
+    TEST(ReachabilityInterface_Constructor, Check_Initializations) {
+        Reachability m(2);
+        EXPECT_EQ(m.uniqueTableSize(), 6);
+    }
+
+
+
+    int main(int argc, char *argv[]) {
+        ::testing::InitGoogleTest(&argc, argv);
+        return RUN_ALL_TESTS();
+    }
 }

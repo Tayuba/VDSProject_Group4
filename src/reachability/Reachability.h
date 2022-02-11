@@ -35,13 +35,14 @@ namespace ClassProject {
                     current_states.push_back(id1);
                     transition_functions.push_back(id1);
 
+
                 }
                 for (int j = 0; j < stateSize; j++) {
                     id2 = Manager::createVar("s'" + std::to_string(j));
                     next_states.push_back(id2);
 
                 }
-                symb_compute_reachable_states();
+               // symb_compute_reachable_states();
             }
     }
 

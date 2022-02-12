@@ -9,8 +9,9 @@ namespace ClassProject {
 
 
     TEST(ReachabilityInterface_Constructor, Check_RuntimeErr_0) {
-        EXPECT_ANY_THROW(Reachability m(0));
+        EXPECT_THROW(Reachability m(0), std::runtime_error);
     }
+
     TEST(ReachabilityInterface_Constructor, Check_Unique_Table_Elements) {
         Reachability m(2);
         EXPECT_EQ(m.unique_table[2].label, "s0");
@@ -18,6 +19,7 @@ namespace ClassProject {
         EXPECT_EQ(m.unique_table[4].label, "s'0");
         EXPECT_EQ(m.unique_table[5].label, "s'1");
     }
+
     TEST(ReachabilityInterface_Constructor, Check_Init_States) {
         Reachability m(2);
         EXPECT_EQ(m.initial_states[0], 0);
@@ -46,7 +48,7 @@ namespace ClassProject {
     }
     TEST(IsReachable, Check_RuntimeErr_DiffSize) {
         Reachability m(2);
-        EXPECT_ANY_THROW(m.isReachable({0,0,1,1}));
+        EXPECT_THROW(m.isReachable({0,0,1,1}), std::runtime_error);
 
     }
 //    TEST(IsReachable, Check_reachability) {
@@ -58,16 +60,31 @@ namespace ClassProject {
 //        EXPECT_EQ(m.isReachable({0,1}), false);
 //    }
 
+    TEST(SetTransitionFunction, Check_RuntimeErr_DiffSize) {
+        Reachability m(2);
+        EXPECT_THROW(m.setTransitionFunctions({0,0,1,1}), std::runtime_error);
+    }
+//    TEST(SetTransitionFunction, Check_RuntimeErr_UnkwonID) {
+//        Reachability m(2);
+//        EXPECT_THROW(m.setTransitionFunctions({0,0,1,1}), std::runtime_error);
+ //   }
+    TEST(SetTransitionFunction, Check_provided_Vector) {
+        Reachability m(4);
+        m.setTransitionFunctions({1,2,3,4});
+        EXPECT_EQ(m.transition_functions[0],1);
+        EXPECT_EQ(m.transition_functions[1],2);
+        EXPECT_EQ(m.transition_functions[2],3);
+        EXPECT_EQ(m.transition_functions[3],4);
+    }
+
     TEST(SetInitState, Check_RuntimeErr_DiffSize) {
         Reachability m(2);
-        std::vector<bool> myVec = {1,0,0,1,1};
-        EXPECT_ANY_THROW(m.setInitState(myVec));
+        EXPECT_THROW(m.setInitState({0,0,1,1}), std::runtime_error);
     }
 
     TEST(SetInitState, Check_InitState) {
         Reachability m(5);
-        std::vector<bool> myVec = {1, 0, 0, 1, 1};
-        m.setInitState(myVec);
+        m.setInitState({1, 0, 0, 1, 1});
 
         EXPECT_TRUE(m.initial_states[0]);
         EXPECT_FALSE(m.initial_states[1]);

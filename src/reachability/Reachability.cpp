@@ -72,10 +72,10 @@ ClassProject::BDD_ID ClassProject::Reachability::symb_compute_reachable_states()
     BDD_ID T = compute_transition_relation(next_states,transition_functions);
     BDD_ID Cs = compute_characteristic_function(current_states, initial_states);
     BDD_ID Cr_it = Cs;
-    BDD_ID img, temp2, Cr,img2, temp3;
+    BDD_ID img, Cr,img2,temp2, temp3;
 
     do{
-         Cr = Cr_it;
+        Cr = Cr_it;
         BDD_ID temp1 = Manager::and2(Cr, T);
 //step 7
         for(int i=current_states.size()-1; i>=0;i--){

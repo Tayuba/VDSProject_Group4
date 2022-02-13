@@ -7,7 +7,7 @@
 
 namespace ClassProject {
 
-
+    //CONSTRUCTOR TESTS
     TEST(ReachabilityInterface_Constructor, Check_RuntimeErr_0) {
         EXPECT_THROW(Reachability m(0), std::runtime_error);
     }
@@ -18,6 +18,14 @@ namespace ClassProject {
         EXPECT_EQ(m.unique_table[3].label, "s1");
         EXPECT_EQ(m.unique_table[4].label, "s'0");
         EXPECT_EQ(m.unique_table[5].label, "s'1");
+    }
+
+    TEST(ReachabilityInterface_Constructor, Check_default_TF){
+        Reachability m(4);
+        EXPECT_EQ(m.transition_functions[0], 2);
+        EXPECT_EQ(m.transition_functions[1], 3);
+        EXPECT_EQ(m.transition_functions[2], 4);
+        EXPECT_EQ(m.transition_functions[3], 5);
     }
 
     TEST(ReachabilityInterface_Constructor, Check_Init_States) {
@@ -38,6 +46,7 @@ namespace ClassProject {
         EXPECT_EQ(m.next_states[1], 5);
     }
 
+    //&getStates() TESTS
     TEST(GetStates_return, Check_whole_states) {
         Reachability m(5);
         EXPECT_EQ(m.getStates()[0], 2);

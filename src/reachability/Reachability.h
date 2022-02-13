@@ -18,8 +18,6 @@ namespace ClassProject {
         std::vector<BDD_ID> next_states;
         std::vector<BDD_ID> transition_functions;
         std::vector<bool> initial_states;
-        BDD_ID transition_relation;
-        BDD_ID char_function;
 
     public:
         explicit Reachability(unsigned int stateSize) : ReachabilityInterface(stateSize){
@@ -49,8 +47,8 @@ namespace ClassProject {
         void setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions);
         const std::vector<BDD_ID> &getStates() const;
         void setInitState(const std::vector<bool> &stateVector);
-        BDD_ID compute_transition_relation(std::vector<BDD_ID>& next_states, std::vector<BDD_ID>& transition_functions);
-        BDD_ID compute_characteristic_function(std::vector<BDD_ID> current_states, std::vector<bool> initial_states);
+        BDD_ID compute_transition_relation(std::vector<BDD_ID>& nextStates, std::vector<BDD_ID>& transitionFunctions);
+        BDD_ID compute_characteristic_function(std::vector<BDD_ID> currentStates, std::vector<bool> initialStates);
         BDD_ID symb_compute_reachable_states();
         bool isReachable(const std::vector<bool> &stateVector);
 

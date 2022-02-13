@@ -57,14 +57,14 @@ namespace ClassProject {
         EXPECT_THROW(m.isReachable({0,0,1,1}), std::runtime_error);
 
     }
-//    TEST(IsReachable, Check_reachability) {
-//        Reachability m(2);
-//
-//        EXPECT_EQ(m.isReachable({0,0}), true);
-//        EXPECT_EQ(m.isReachable({1,1}), true);
-//        EXPECT_EQ(m.isReachable({1,0}), false);
-//        EXPECT_EQ(m.isReachable({0,1}), false);
-//    }
+    TEST(IsReachable, Check_reachability) {
+        Reachability m(2);
+
+        EXPECT_EQ(m.isReachable({0,0}), false);
+        EXPECT_EQ(m.isReachable({1,1}), true);
+        EXPECT_EQ(m.isReachable({1,0}), true);
+        EXPECT_EQ(m.isReachable({0,1}), false);
+    }
 
     //================================================ setTransitionFunctions TESTS ==================================
     TEST(SetTransitionFunction, Check_RuntimeErr_DiffSize) {

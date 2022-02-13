@@ -72,10 +72,10 @@ ClassProject::BDD_ID ClassProject::Reachability::symb_compute_reachable_states()
     BDD_ID T = compute_transition_relation(next_states,transition_functions);
     BDD_ID Cs = compute_characteristic_function(current_states, initial_states);
     BDD_ID Cr_it = Cs;
-    BDD_ID img, temp2, Cr,img2, temp3;
+    BDD_ID img, Cr,img2;
 
     do{
-         Cr = Cr_it;
+        Cr = Cr_it;
         BDD_ID temp1 = Manager::and2(Cr, T);
 //step 7
         for(int i=current_states.size()-1; i>=0;i--){
@@ -83,17 +83,11 @@ ClassProject::BDD_ID ClassProject::Reachability::symb_compute_reachable_states()
             temp1 = img;
         }
 //step 8
-        temp2 = 1;
-        BDD_ID xnor_1;
-        for(int i=0; i<current_states.size();i++){
-            xnor_1 = Manager::xnor2(current_states[i],next_states[i]);
-            temp2 = Manager::and2(xnor_1,temp2);
-        }
-        temp3 = Manager::and2(temp2,img);
+        temp1 = Manager::and2(Cs,img);
 
         for(int i=next_states.size()-1; i>=0;i--){
-            img2 = Manager::or2(coFactorTrue(temp3, next_states[i]),coFactorFalse(temp3, next_states[i]));
-            temp3 = img2;
+            img2 = Manager::or2(coFactorTrue(temp1, next_states[i]),coFactorFalse(temp1, next_states[i]));
+            temp1 = img2;
         }
         //step 9
         Cr_it = Manager::or2(Cr,img2);

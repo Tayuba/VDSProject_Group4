@@ -119,10 +119,10 @@ bool ClassProject:: Reachability :: isReachable(const std::vector<bool> &stateVe
             }
 
             if (isR <= 1)
-                return true;
+                return isR;
 
-            else
-                return false;
+//            else
+//                return false;
         }
     }
 

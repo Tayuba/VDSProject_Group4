@@ -2,7 +2,7 @@
 // Created by ludwig on 22.11.16.
 
 #include "Tests.h"
-
+// add delete
 namespace ClassProject{
     TEST(uniqueTableSizeTest, ChecksSizeOfTable) {
         Manager *m = new Manager();

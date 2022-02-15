@@ -20,8 +20,11 @@ using namespace ClassProject;
 
 
         std::cout<< m->unique_table[f].high << std::endl<< m->unique_table[f].low<<std::endl;
+        bool x = false;
+        Manager *q = new Manager();
 
-
+        BDD_ID w = q->and2(x, id1)  ;
+        std::cout<<w;
         return 0;
     }
 

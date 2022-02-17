@@ -106,13 +106,13 @@ jobs:
 
 
 
-#       - name: Build VDSProject_reachability
-#         working-directory: ${{runner.workspace}}/build
-#         shell: bash
-#         run:  cmake --build . --config $BUILD_TYPE --target VDSProject_reachability
+       - name: Build VDSProject_reachability
+         working-directory: ${{runner.workspace}}/build
+         shell: bash
+         run:  cmake --build . --config $BUILD_TYPE --target VDSProject_reachability
 
 
-#       - name: Run VDSProject_reachability
-#         working-directory: ${{runner.workspace}}/build
-#         shell: bash
-#         run: ${{runner.workspace}}/build/src/reachability/VDSProject_reachability
+       - name: Run VDSProject_reachability
+         working-directory: ${{runner.workspace}}/build
+         shell: bash
+         run: ${{runner.workspace}}/build/src/reachability/VDSProject_reachability
